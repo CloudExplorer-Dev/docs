@@ -1,0 +1,144 @@
+site_name: 'CLoudExploer-Lite 文档'
+site_url: 'https://fit2cloud/cloudexplorer-lite'
+site_description: 'Document'
+site_author: 'CLoudExploer-Lite'
+google_analytics: ['UA-147297392-11', 'https://fit2cloud.com/cloudexplorer-lite']
+
+repo_name: 'CloudExplorer-Lite'
+repo_url: 'https://github.com/CloudExplorer-Dev'
+
+edit_uri: https://github.com/CloudExplorer-Dev/docs/edit/master/docs/
+theme:
+    name: 'material'
+    logo: 'img/logo-white.png'
+    favicon: 'img/facio.ico'
+    language: 'zh'
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - django
+    palette:
+        - scheme: default
+          accent: blue
+          toggle:
+              icon: material/weather-sunny
+              name: Switch to dark mode
+        - scheme: slate
+          accent: blue
+          toggle:
+              icon: material/weather-night
+              name: Switch to light mode
+    features:
+        - navigation.instant
+        - navigation.tracking
+        - navigation.indexes
+        - navigation.top
+        - search.suggest
+        - search.highlight
+        - search.share
+        - header.autohide
+        - content.tabs.link
+    custom_dir: "theme"
+nav:
+    - 产品介绍: index.md
+    - 快速入门: quick_start.md
+    - 系统架构: system_arch.md
+    - 安装部署:
+        - 在线安装: installation/online_installation.md
+        - 离线安装: installation/offline_installation.md
+    - 功能手册:
+        - 通用功能: user_manual/general.md
+        - 主页: user_manual/homepage.md
+        - 管理中心:
+            - 云账号: 
+                - 添加云账号: user_manual/management/add_cloudaccount.md
+                - 数据同步设置: user_manual/management/sysn_setting.md
+            - 用户管理: user_manual/management/user_management.md
+            - 日志管理: user_manual/management/log.md
+            - 系统设置: user_manual/management/system_management.md
+            - 模块管理: user_manual/management/modoule.md
+        - 云主机服务:
+            - 创建云主机: user_manual/cloud-server/create_server.md
+            - 云主机管理: user_manual/cloud-server/server.md
+            - 磁盘管理: user_manual/cloud-server/disk.md
+            - 回收站: user_manual/cloud-server/Recycling_station.md
+            - 任务: user_manual/cloud-server/task.md
+        - 运营分析:
+            - 总览: user_manual/operation-analytics/overview.md
+            - 基础资源分析: user_manual/operation-analytics/infrastructure_analysis.md
+            - 云主机分析: user_manual/operation-analytics/server_analysis.md
+            - 磁盘分析: user_manual/operation-analytics/disk_analysis.md
+            - 资源优化: user_manual/operation-analytics/resource optimization.md
+        - 云账单:
+            - 账单总览: user_manual/finance-management/bill_overview.md
+            - 账单明细: user_manual/finance-management/bill_detail.md
+            - 自定义账单: user_manual/finance-management/custom_bill.md
+            - 分账设置: user_manual/finance-management/ledger_setting.md      
+        - 安全合规:
+            - 总览: user_manual/security-compliance/overview.md
+            - 合规扫描: user_manual/security-compliance/compliance_scan.md
+            - 规则设置: 
+                - 合规规则: user_manual/security-compliance/rule_setting.md
+                - 规则组: user_manual/security-compliance/rule_group.md
+            - 风险条例: user_manual/security-compliance/risk.md
+
+    - 联系我们: contact.md
+
+markdown_extensions:
+    - admonition
+    - codehilite:
+          guess_lang: True
+          linenums: False
+    - toc:
+          permalink: True
+    - footnotes
+    - attr_list
+    - def_list
+    - tables
+    - abbr
+    - md_in_html
+    - pymdownx.extra
+    - pymdownx.arithmatex
+    - pymdownx.betterem:
+          smart_enable: all
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.emoji:
+          emoji_generator: !!python/name:pymdownx.emoji.to_png
+    - pymdownx.inlinehilite
+    - pymdownx.magiclink
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.superfences
+    - pymdownx.tasklist
+    - pymdownx.tilde
+    - pymdownx.betterem
+    - pymdownx.progressbar
+    - lightgallery
+    - pymdownx.tabbed
+
+extra_css:
+    - css/extra.css
+
+copyright: Copyright &copy; 2014-2023 <a href="https://www.fit2cloud.com">杭州飞致云信息科技有限公司</a>, All Rights Reserved. <a href="http://www.beian.miit.gov.cn" target="_blank">京ICP备15023818号</a>
+
+plugins:
+    - search:
+          lang:
+              - en
+              - ja
+          separator: '[\s\-\.]+'
+extra:
+    version:
+        method: mike
+    analytics:
+        provider: google
+        property: UA-147297392-11
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/CloudExplorer-dev
+        - icon: fontawesome/solid/envelope
+          link: mailto:support@fit2cloud.com
+        - icon: fontawesome/solid/phone
+          link: tel://400-052-0755
