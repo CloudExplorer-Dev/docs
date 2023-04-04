@@ -1,7 +1,7 @@
-site_name: 'CLoudExploer-Lite 文档'
+site_name: 'CloudExplorer-Lite 文档'
 site_url: 'https://fit2cloud/cloudexplorer-lite'
 site_description: 'Document'
-site_author: 'CLoudExploer-Lite'
+site_author: 'CloudExplorer-Lite'
 google_analytics: ['UA-147297392-11', 'https://fit2cloud.com/cloudexplorer-lite']
 
 repo_name: 'CloudExplorer-Lite'
