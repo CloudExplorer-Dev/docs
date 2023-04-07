@@ -118,7 +118,7 @@
 !!! Abstract ""
     ```sh
     # 进入安装包目录
-    cd cloudexplorer-v0.2.0-offline-linux-x86_64
+    cd cloudexplorer-v1.0.0-offline-linux-x86_64
     # 运行安装脚本
     bash install.sh
     ```
@@ -160,7 +160,7 @@
     ```
 
 !!! Abstract ""
-    安装脚本默认使用 /opt/cloudexplorer 使用的数据库，cloudexplorer 的配置文件、数据及日志等均存放在该安装目录。  
+    安装脚本默认使用 /opt/cloudexplorer 为安装目录，cloudexplorer 的配置文件、数据及日志等均存放在该安装目录。  
     **安装目录目录结构说明：**
     ```
     /opt/cloudexplorer/
@@ -185,6 +185,6 @@
     ```
     地址: http://目标服务器IP地址:服务运行端口
     用户名: admin
-    密码: cloudexplorer-lite
+    密码: cloudexplorer
     ```
 
