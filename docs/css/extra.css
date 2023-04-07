@@ -131,7 +131,7 @@
   border-left-width: 4px;
 }
 .md-typeset .admonition.abstract, .md-typeset details.abstract{
-  border-left-color: rgb(51,12,255);
+  border-left-color: rgb(51,112,255);
 }
 /** 隐藏所有标题  **/
 .admonition-title {
