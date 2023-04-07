@@ -116,10 +116,6 @@
 
 !!! Abstract ""
 
-    认证介绍——待补充
-
-!!! Abstract ""
-
     第一步：选择云平台（OpenStack）。<br />
 
 ![添加openstack第一步](../../img/management/add_cloudaccount/添加openstack第一步.png){ width="1235px" }
@@ -134,21 +130,17 @@
 
     __字段说明：__<br />
     - 云账号名称：云管平台定义的字段用于区分云账号的标识，名称唯一。<br />
-    - Domain ID：
-    - Project ID：
-    - 用户 ID：
-    - 密码：
-    - 认证地址：
+    - Domain ID：OpenStack 账号域 ID。<br />
+    - Project ID：OpenStack 账号项目 ID。<br />
+    - 用户 ID：OpenStack 账号授权 API 访问用户的用户 ID。<br />
+    - 密码：OpenStack 账号授权 API 访问用户名对应的密码。<br />
+    - 认证地址：OpenStack 账号身份认证地址。
  
 !!! Abstract ""
 
     点击“确认”后，云管平台校验通过后保存成功，返回云账号列表页面，新增的云账号状态为同步中，云管平台会全量同步云主机、云磁盘、镜像等资源数据。
 
 ## 5 添加 VMware 云账号
-
-!!! Abstract ""
-
-    认证介绍————待补充
 
 !!! Abstract ""
 
@@ -166,9 +158,9 @@
 
     __字段说明：__<br />
     - 云账号名称：云管平台定义的字段用于区分云账号的标识，名称唯一。<br />
-    - 用户名：
-    - 密码：
-    - 认证地址：
+    - 用户名：VMware 账号授权 API 访问用户的用户名。<br />
+    - 密码：VMware 账号授权 API 访问用户名对应的密码。<br />
+    - vCenter服务器IP：vCenter 所在服务器 IP 地址。
  
 !!! Abstract ""
 
