@@ -55,8 +55,9 @@ nav:
                 - 数据同步设置: user_manual/management/sysn_setting.md
             - 用户管理: user_manual/management/user_management.md
             - 日志管理: user_manual/management/log.md
-            - 系统设置: user_manual/management/system_management.md
             - 模块管理: user_manual/management/modoule.md
+            - 系统设置: user_manual/management/system_management.md
+
         - 云主机服务:
             - 创建云主机: user_manual/cloud-server/create_server.md
             - 云主机管理: user_manual/cloud-server/server.md
