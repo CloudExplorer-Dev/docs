@@ -62,8 +62,9 @@ nav:
             - 创建云主机: user_manual/cloud-server/create_server.md
             - 云主机管理: user_manual/cloud-server/server.md
             - 磁盘管理: user_manual/cloud-server/disk.md
-            - 回收站: user_manual/cloud-server/Recycling_station.md
             - 任务: user_manual/cloud-server/task.md
+            - 回收站: user_manual/cloud-server/Recycling_station.md
+
         - 运营分析:
             - 总览: user_manual/operation-analytics/overview.md
             - 基础资源分析: user_manual/operation-analytics/infrastructure_analysis.md

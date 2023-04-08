@@ -7,11 +7,8 @@
     云主机的创建、关机、开机、关闭电源、重启、添加磁盘、配置变更、删除操作均会生成相应的任务记录。<br />
     云磁盘的挂载、卸载、扩容和删除操作也会生成相应的任务记录。<br />
 
-![任务列表](../../img/cloud-server/task/任务列表.png){ width="1235px" }
-
-!!! Abstract ""
-
     操作方式：【操作】-【查看详情】，打开任务详情页面，查看选中任务的具体情况。<br />
 
-![任务详情](../../img/cloud-server/task/任务详情.png){ width="1235px" }
-![任务详情](../../img/cloud-server/task/任务详情1.png){ width="1235px" }
+![任务列表](../../img/cloud-server/task/任务列表.png){ width="1235px" }
+![成功任务](../../img/cloud-server/task/成功任务.png){ width="1235px" }
+![失败任务](../../img/cloud-server/task/失败任务.png){ width="1235px" }
