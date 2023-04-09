@@ -78,7 +78,7 @@ nav:
      
         - 安全合规:
             - 总览: user_manual/security-compliance/overview.md
-            - 合规扫描: user_manual/security-compliance/compliance_scan.md
+            - 扫描检查: user_manual/security-compliance/compliance_scan.md
             - 规则设置: 
                 - 合规规则: user_manual/security-compliance/rule_setting.md
                 - 规则组: user_manual/security-compliance/rule_group.md
