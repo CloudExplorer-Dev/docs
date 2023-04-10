@@ -12,7 +12,7 @@
     - 多云对接：CloudExplorer-Lite 支持对接纳管市场上主流的公有云和私有云，包括阿里云、华为云、腾讯云、VMware、OpenStack等；
     - 开箱即用：作为一款轻量版云管平台，CloudExplorer-Lite 提供诸多开箱即用的功能满足大部分企业的基本需求；
     - 扩展能力：云管平台是解决方案类型软件。为了满足企业的个性化和定制化需求，CloudExplorer-Lite 在架构上提供强大的多租户体系和模块化能力。
-![产品优势](./img/index/产品优势.png){ width="1235px" }  
+![产品优势](./img/index/产品优势.png){ width="600px" }  
 
 ## 2 多云对接能力
 
@@ -58,7 +58,7 @@
 - 4.1 多租户体系
 !!! Abstract "" 
     CloudExplorer-Lite 提供了多租户、多角色的管理模型。系统初始化了3种内置角色分别为系统管理员、组织管理员和普通用户，用户可根据企业的实际情况进行灵活的租户体系映射。  
-![管理模型](./img/index/管理模型.png){ width="800px" }
+![管理模型](./img/index/管理模型.png){ width="600px" }
 
 - 4.2 模块设计
 !!! Abstract "" 
