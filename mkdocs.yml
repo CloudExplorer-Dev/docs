@@ -83,7 +83,7 @@ nav:
                 - 合规规则: user_manual/security-compliance/rule_setting.md
                 - 规则组: user_manual/security-compliance/rule_group.md
             - 风险条例: user_manual/security-compliance/risk.md
-
+    - 版本迭代: update_log.md
     - 联系我们: contact.md
 
 markdown_extensions:
