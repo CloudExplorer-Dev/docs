@@ -5,7 +5,7 @@
 
 ![安全合规总览](../../img/security-compliance/overview/安全合规总览.png){ width="1235px" }
 
-!!! Abstract " "
+!!! Abstract ""
 
       __页面内容说明：__<br />
       - 不合规资源：最近一次扫描检测资源中不合规资源数量；<br />

@@ -133,6 +133,10 @@
 .md-typeset .admonition.abstract, .md-typeset details.abstract{
   border-left-color: rgb(51,112,255);
 }
+.md-typeset p, .md-typeset ul, .md-typeset ol, .md-typeset dl, .md-typeset blockquote {
+  display: flow-root;
+  margin: 1em 0;
+}
 /** 显示所有标题  **/
 .admonition-title {
   display: block;  
