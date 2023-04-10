@@ -4,8 +4,9 @@
     **部署服务器要求：**
 
     * 操作系统: CentOS 7.x
-    * CPU/内存: 4核8G
+    * CPU/内存: 8核16G
     * 磁盘空间: 200G
+  
 
 ## 2 下载安装包
 
@@ -21,7 +22,7 @@
     ```sh
     cd /tmp
     # 解压安装包
-    tar -zxvf cloudexplorer-v0.2.0-offline-linux-x86_64.tar.gz
+    tar -zxvf cloudexplorer-v1.0.0-offline-linux-x86_64.tar.gz
     ```
 
 ## 4 设置安装参数（可选）

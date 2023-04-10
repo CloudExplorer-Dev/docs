@@ -133,9 +133,9 @@
 .md-typeset .admonition.abstract, .md-typeset details.abstract{
   border-left-color: rgb(51,112,255);
 }
-/** 隐藏所有标题  **/
+/** 显示所有标题  **/
 .admonition-title {
-  display: none;  
+  display: block;  
 }
 
 
