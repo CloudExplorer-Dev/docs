@@ -1,17 +1,17 @@
 site_name: 'CloudExplorer-Lite 文档'
-site_url: 'https://fit2cloud/cloudexplorer-lite'
+site_url: 'https://www.fit2cloud.com/cloudexplorer-lite/index.html'
 site_description: 'Document'
 site_author: 'CloudExplorer-Lite'
-google_analytics: ['UA-147297392-11', 'https://fit2cloud.com/cloudexplorer-lite']
+google_analytics: ['UA-147297392-11', 'https://www.fit2cloud.com/cloudexplorer-lite/index.html']
 
 repo_name: 'CloudExplorer-Lite'
 repo_url: 'https://github.com/CloudExplorer-Dev'
 
-edit_uri: https://github.com/CloudExplorer-Dev/docs/edit/master/docs/
+edit_uri: https://github.com/CloudExplorer-Dev/docs/tree/main/docs
 theme:
     name: 'material'
-    logo: 'img/logo-white.png'
-    favicon: 'img/facio.ico'
+    logo: './img/logo-white.png'
+    favicon: './img/facio.ico'
     language: 'zh'
     highlightjs: true
     hljs_languages:

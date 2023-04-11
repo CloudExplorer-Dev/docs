@@ -1,6 +1,6 @@
 ## 1 微信公众号
 
-![wechat-official](img/wechat-official.jpg)
+
 
 ## 2 微信群
 
@@ -23,7 +23,7 @@
 ## 4 联系方式
 
 !!! Abstract ""
-    - 官网：https://fit2cloud.com/cloudexplorer-lite
+    - 官网：https://www.fit2cloud.com/cloudexplorer-lite/index.html
     - 邮箱：support@fit2cloud.com
     - 电话：400-052-0755
 

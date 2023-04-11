@@ -2,17 +2,16 @@
 
 !!! Abstract ""
     CloudExplorer-Lite 是开源的轻量版多云管理平台；   
-    CloudExplorer-Lite 可以轻松对接纳管市场上主流的公有云和私有云，提供开箱即用的云主机管理、云账单、运营分析和安全合规等基本功能，同时提供强大的扩展能力来满足企业的个性化和定制化需求。 
+    CloudExplorer-Lite 脱胎于飞致云创始软件产品 CloudExplorer 多云管理平台，支持对接纳管主流的公有云和私有云基础设施，提供开箱即用的云主机管理、云账单、运营分析和安全合规等基本功能，同时还可提供强大的扩展能力以满足企业的定制化需求。 
 ![主页](./img/index/主页.png){ width="1235px" }
 
 
 ## 1 产品优势
 
 !!! Abstract ""
-    - 多云对接：CloudExplorer-Lite 支持对接纳管市场上主流的公有云和私有云，包括阿里云、华为云、腾讯云、VMware、OpenStack等；
+    - 多云对接：CloudExplorer-Lite 支持对接纳管市场上主流的公有云和私有云，包括阿里云、华为云、腾讯云、VMware、OpenStack 等；
     - 开箱即用：作为一款轻量版云管平台，CloudExplorer-Lite 提供诸多开箱即用的功能满足大部分企业的基本需求；
-    - 扩展能力：云管平台是解决方案类型软件。为了满足企业的个性化和定制化需求，CloudExplorer-Lite 在架构上提供强大的多租户体系和模块化能力。
-![产品优势](./img/index/产品优势.png){ width="600px" }  
+    - 扩展能力：CloudExplorer-Lite 提供了强大的多租户体系和模块化能力，可以满足企业的定制化需求。
 
 ## 2 多云对接能力
 
