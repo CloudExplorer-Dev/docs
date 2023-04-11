@@ -38,7 +38,7 @@ nav:
         - 运营分析: user_manual/view_generation.md
         - 安全合规: user_manual/dashboard_generation.md
     - 开发文档: 
-        - 开发环境: dev_manual/dev_manual.md
+        - 开发文档: dev_manual/dev_manual.md
     - 更新日志: update_log.md
     
     - 关于:
