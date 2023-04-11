@@ -83,6 +83,9 @@ nav:
                 - 合规规则: user_manual/security-compliance/rule_setting.md
                 - 规则组: user_manual/security-compliance/rule_group.md
             - 风险条例: user_manual/security-compliance/risk.md
+    - 开发文档: 
+        - 开发环境准备: dev_manual/dev_manual.md
+        - 新增模块: dev_manual/add_model.md
     - 更新日志: update_log.md
     - 联系我们: contact.md
 

@@ -37,7 +37,10 @@ nav:
             - 分账设置: user_manual/dataset_configuration.md
         - 运营分析: user_manual/view_generation.md
         - 安全合规: user_manual/dashboard_generation.md
-    - 版本迭代: update_log.md
+    - 开发文档: 
+        - 开发环境: dev_manual/dev_manual.md
+    - 更新日志: update_log.md
+    
     - 关于:
         - 联系我们: about/contact.md
 
