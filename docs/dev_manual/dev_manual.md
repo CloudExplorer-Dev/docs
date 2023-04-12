@@ -21,7 +21,7 @@
 ### 1.2 后端环境
 !!! Abstract ""
     - 安装 [JDK17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
-    - 安装 [Maven](https://maven.apache.org/download.cgi)
+    - 安装 [Maven](https://maven.apache.org/download.cgi) (可选)
     - 安装 [Docker](https://www.docker.com/) (可选)
 
 
@@ -45,7 +45,7 @@
     - 若在 Windows 环境下配置，将配置文件放置到工程源码的所在盘的指定路径下。
     如源码工程在 D 盘下，则 /opt/cloudexplorer 存放路径为 d:\opt\cloudexplorer
 
-    - 配置`/opt/cloudexplorer/conf/cloudexplorer.properties`，根据实际情况配置文件中的数据库访问地址等参数
+    - 配置`/opt/cloudexplorer/conf/cloudexplorer.properties`，建议按下列参数配置，并根据实际情况配置文件中的数据库访问地址等参数
     ```properties
     ce.datasource.url=jdbc:mysql://localhost:3306/ce?autoReconnect=false&useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
     ce.datasource.password=password
@@ -81,6 +81,8 @@
     spring.servlet.multipart.max-request-size=50MB
 
     logger.level=INFO
+
+    ce.debug=true
 
     ```
     
@@ -144,9 +146,34 @@
     #启动operation-analysis
     yarn dev:operation
     ```
+    根据启动后控制台显示地址进行访问
+
 ### 3.2 启动后端端项目
 !!! Abstract ""
     启动对应模块的Application.java启动类即可
+
+### 3.3 jar包方式启动
+!!! Abstract ""
+    先执行构建
+    ```bash
+    ./mvnw clean install
+    ```
+    
+
+    等待构建完毕，构建完的 jar 包在项目根目录下 target 内
+    
+    - 将 target 内 repository 文件夹拷贝至 /opt/cloudexplorer/apps/core/ 目录下
+    
+    - 将 target 内 `eureka-main.jar`, `gateway-main.jar`, `management-center-main.jar` 拷贝至 /opt/cloudexplorer/apps/core/ 目录下
+
+    - 将 target 内其余 jar 包拷贝至 /opt/cloudexplorer/apps/extra/ 目录下
+
+    - 使用 `java -jar xxx.jar` 命令启动各个模块
+
+### 3.4 注意事项
+!!! Abstract ""
+    第一次启动时，除 eureka 以外，必须先启动 management-center 进行必要数据库的初始化。
+    
 
 ## 4 代码相关
 ### 4.1 接口基本调用参数
