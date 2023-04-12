@@ -1,5 +1,8 @@
 # 新增模块
 
+!!! Abstract ""
+    本节介绍如何在 CloudExplorer Lite 中新增一个模块服务。
+
 ## 修改模块名称、服务端口
 
 !!! Abstract ""

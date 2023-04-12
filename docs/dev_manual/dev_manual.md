@@ -1,5 +1,8 @@
 # 开发环境搭建
 
+!!! Abstract ""
+    本节介绍如何搭建 CloudExplorer Lite 开发环境。
+
 ## 1 前端环境准备
 
 - 安装 [node](https://nodejs.org/)

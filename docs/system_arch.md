@@ -6,12 +6,12 @@
 !!! Abstract ""
     - Eureka ：服务注册中心。
     - GateWay：API 网关服务。
-    - 管理中心：CloudExplorer-Lite 产品的管理中心模块。
-    - 云主机服务：CloudExplorer-Lite 产品的云主机服务模块。
-    - 云账单服务：CloudExplorer-Lite 产品的云账单服务模块。
-    - 运营分析：CloudExplorer-Lite 产品的运营分析模块。
-    - 安全合规：CloudExplorer-Lite 产品的安全合规模块。
-    - MySQL：CloudExplorer-Lite 产品主要数据均存储在MySQL。
+    - 管理中心：CloudExplorer Lite 产品的管理中心模块。
+    - 云主机服务：CloudExplorer Lite 产品的云主机服务模块。
+    - 云账单服务：CloudExplorer Lite 产品的云账单服务模块。
+    - 运营分析：CloudExplorer Lite 产品的运营分析模块。
+    - 安全合规：CloudExplorer Lite 产品的安全合规模块。
+    - MySQL：CloudExplorer Lite 产品主要数据均存储在MySQL。
     - Redis：缓存角色、权限数据。
     - ElasticSearch：存储了同步到账单数据、资源监控数据、安全合规检测资源数据和日志数据。
     - Logstash：将本地日志文件推送至 ElasticSearch。
@@ -22,7 +22,7 @@
 ## 3 管理模型
 ![管理模型](./img/systemarch/管理模型.png){ width="800px" }
 !!! Abstract ""
-    - 平台：每个独立部署的 CloudExplorer-Lite 即称为一套系统。
+    - 平台：每个独立部署的 CloudExplorer Lite 即称为一套云管理平台系统。
     - 系统管理员：角色的权限范围为整个平台，可管理整个平台内的用户、组织、工作空间、云账号等所有资源。可管理整个平台的系统级参数配置。
     - 组织：平台中的一级租户，可以映射为企业的不同部门或业务线。
     - 组织管理员：角色的权限范围限定在某个组织及关联的子级组织或工作空间，可管理当前组织下的所有资源和用户。

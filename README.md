@@ -1,4 +1,4 @@
-本仓库保存了 [CloudExplorer-Lite 项目]() 的 [官方文档](https://fit2cloud.com/cloudexplorer-lite/docs/)，该文档使用 [MkDocs]() 文档框架下的 [Material for MkDocs]() 主题进行构建。
+本仓库保存了 [CloudExplorer Lite 项目]() 的 [官方文档](https://fit2cloud.com/cloudexplorer-lite/docs/)，该文档使用 [MkDocs]() 文档框架下的 [Material for MkDocs]() 主题进行构建。
 
 ## 本地开发
 
@@ -18,31 +18,54 @@ pip install -r requirements/requirements.txt
 ```yaml
 ..........
 nav:
-    - 项目介绍: index.md
+    - 产品介绍: index.md
+    - 快速入门: quick_start.md
     - 系统架构: system_arch.md
-    - 安装部署: 
+    - 安装部署:
         - 在线安装: installation/online_installation.md
         - 离线安装: installation/offline_installation.md
-    - 用户手册:
-        - 管理中心: user_manual/general.md
-            - 云账号: user_manual/dataset_configuration.md 
-            - 用户管理: user_manual/dataset_configuration.md
-            - 日志管理: user_manual/dataset_configuration.md
-            - 系统设置: user_manual/dataset_configuration.md
-        - 云主机服务: user_manual/datasource_configuration.md
-        - 云账单: user_manual/dataset_configuration.md
-            - 账单总览: user_manual/dataset_configuration.md
-            - 账单明细: user_manual/dataset_configuration.md
-            - 自定义账单: user_manual/dataset_configuration.md
-            - 分账设置: user_manual/dataset_configuration.md
-        - 运营分析: user_manual/view_generation.md
-        - 安全合规: user_manual/dashboard_generation.md
+    - 功能手册:
+        - 通用功能: user_manual/general.md
+        - 主页: user_manual/homepage.md
+        - 管理中心:
+            - 云账号: 
+                - 添加云账号: user_manual/management/add_cloudaccount.md
+                - 数据同步设置: user_manual/management/sysn_setting.md
+            - 用户管理: user_manual/management/user_management.md
+            - 日志管理: user_manual/management/log.md
+            - 模块管理: user_manual/management/modoule.md
+            - 系统设置: user_manual/management/system_management.md
+
+        - 云主机管理:
+            - 创建云主机: user_manual/cloud-server/create_server.md
+            - 云主机管理: user_manual/cloud-server/server.md
+            - 磁盘管理: user_manual/cloud-server/disk.md
+            - 任务: user_manual/cloud-server/task.md
+            - 回收站: user_manual/cloud-server/Recycling_station.md
+        - 云账单:
+            - 账单总览: user_manual/finance-management/bill_overview.md
+            - 账单明细: user_manual/finance-management/bill_detail.md
+            - 自定义账单: user_manual/finance-management/custom_bill.md
+            - 分账设置: user_manual/finance-management/ledger_setting.md 
+        - 运营分析:
+            - 总览: user_manual/operation-analytics/overview.md
+            - 基础资源分析: user_manual/operation-analytics/infrastructure_analysis.md
+            - 云主机分析: user_manual/operation-analytics/server_analysis.md
+            - 磁盘分析: user_manual/operation-analytics/disk_analysis.md
+            - 资源优化: user_manual/operation-analytics/resource optimization.md
+     
+        - 安全合规:
+            - 总览: user_manual/security-compliance/overview.md
+            - 扫描检查: user_manual/security-compliance/compliance_scan.md
+            - 规则设置: 
+                - 合规规则: user_manual/security-compliance/rule_setting.md
+                - 规则组: user_manual/security-compliance/rule_group.md
+            - 风险条例: user_manual/security-compliance/risk.md
     - 开发文档: 
-        - 开发环境: dev_manual/dev_manual.md
+        - 开发环境准备: dev_manual/dev_manual.md
+        - 新增模块: dev_manual/add_model.md
     - 更新日志: update_log.md
-    
-    - 关于:
-        - 联系我们: about/contact.md
+    - 联系我们: contact.md
 
 ..........
 ```

@@ -1,10 +1,10 @@
-site_name: 'CloudExplorer-Lite 文档'
+site_name: 'CloudExplorer Lite 文档'
 site_url: 'https://www.fit2cloud.com/cloudexplorer-lite/index.html'
 site_description: 'Document'
-site_author: 'CloudExplorer-Lite'
+site_author: 'CloudExplorer Lite'
 google_analytics: ['UA-147297392-11', 'https://www.fit2cloud.com/cloudexplorer-lite/index.html']
 
-repo_name: 'CloudExplorer-Lite'
+repo_name: 'CloudExplorer Lite'
 repo_url: 'https://github.com/CloudExplorer-Dev'
 
 edit_uri: https://github.com/CloudExplorer-Dev/docs/tree/main/docs
@@ -58,7 +58,7 @@ nav:
             - 模块管理: user_manual/management/modoule.md
             - 系统设置: user_manual/management/system_management.md
 
-        - 云主机服务:
+        - 云主机管理:
             - 创建云主机: user_manual/cloud-server/create_server.md
             - 云主机管理: user_manual/cloud-server/server.md
             - 磁盘管理: user_manual/cloud-server/disk.md

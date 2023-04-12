@@ -11,7 +11,7 @@
 ## 2 下载安装包
 
 !!! Abstract ""
-    **请自行下载 CloudExplorer-Lite 最新版本的离线安装包，并复制到目标机器的 /tmp 目录下：**  
+    **请自行下载 CloudExplorer Lite 最新版本的离线安装包，并复制到目标机器的 /tmp 目录下：**  
     安装包下载链接: https://community.fit2cloud.com/#/products/cloudexplorer-lite/downloads
 
 ## 3 解压安装包
@@ -28,7 +28,7 @@
 ## 4 设置安装参数（可选）
 
 !!! Abstract ""
-	**注意：强烈建议不要将安装包的路径作为 CloudExplorer-Lite 的安装目录，对日常的维护以及后续版本的升级会带来一些不必要的麻烦。**  
+	**注意：强烈建议不要将安装包的路径作为 CloudExplorer Lite 的安装目录，对日常的维护以及后续版本的升级会带来一些不必要的麻烦。**  
 
     ```properties
     #本机IP
@@ -155,7 +155,7 @@
     default-character-set=utf8mb4
 	```
 
-    **请参考文档中的建库语句创建 CloudExplorer-lite 使用的数据库，CloudExplorer-lite 服务启动时会自动在配置的库中创建所需的表结构及初始化数据。**
+    **请参考文档中的建库语句创建 CloudExplorer lite 使用的数据库，CloudExplorer lite 服务启动时会自动在配置的库中创建所需的表结构及初始化数据。**
     ```mysql
     CREATE DATABASE `ce` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
     ```
@@ -181,7 +181,7 @@
 
     ```
 !!! Abstract ""
-    **安装成功后，通过浏览器访问如下页面登录 CloudExplorer-lite：**
+    **安装成功后，通过浏览器访问如下页面登录 CloudExplorer lite：**
 
     ```
     地址: http://目标服务器IP地址:服务运行端口
