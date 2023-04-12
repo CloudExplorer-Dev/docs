@@ -1,4 +1,5 @@
 # 开发文档
+
 ## 1 环境准备
 
 ### 1.1 前端环境
@@ -19,6 +20,7 @@
 
 
 ### 1.2 后端环境
+
 !!! Abstract ""
     - 安装 [JDK17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
     - 安装 [Maven](https://maven.apache.org/download.cgi) (可选)
@@ -26,13 +28,16 @@
 
 
 ## 2 开发准备
+
 ### 2.1 VMware相关依赖
+
 !!! Abstract ""
     请在项目根目录执行
     ``` bash
     ./mvnw initialize
     ```
 ### 2.2 本地配置
+
 !!! Abstract ""
     若要项目启动，需要准备配置文件及目录
 
@@ -123,7 +128,9 @@
     
 
 ## 3 开发调试
+
 ### 3.1 启动前端项目
+
 !!! Abstract ""
     先在根目录执行安装前端需要的依赖
     ```bash
@@ -149,10 +156,12 @@
     根据启动后控制台显示地址进行访问
 
 ### 3.2 启动后端端项目
+
 !!! Abstract ""
     启动对应模块的Application.java启动类即可
 
 ### 3.3 jar包方式启动
+
 !!! Abstract ""
     先执行构建
     ```bash
@@ -171,12 +180,15 @@
     - 使用 `java -jar xxx.jar` 命令启动各个模块
 
 ### 3.4 注意事项
+
 !!! Abstract ""
     第一次启动时，除 eureka 以外，必须先启动 management-center 进行必要数据库的初始化。
     
 
 ## 4 代码相关
+
 ### 4.1 接口基本调用参数
+
 !!! Abstract ""
     调用登录以及任意需要认证的接口，在response的header内均会返回当前用户的 JWT token：`CE-TOKEN`
 
@@ -189,6 +201,7 @@
     若`CE-ROLE`和`CE-SOURCE`与当前用户不匹配，后端认为就是`ANONYMOUS`角色。
 
 ### 4.2 新模块搭建
+
 !!! Abstract ""
     - 打开目录`demo/src/test/java/`下文件 `CreateModuleUtil.java`
 
@@ -260,6 +273,7 @@
 ### 4.3 后端权限
 
 ##### 4.3.1 模块基础权限
+
 !!! Abstract ""
     模块内基础权限配置，在每个模块内的`PermissionConstants.java`中配置`MODULE_PERMISSION_BUILDER`
 
@@ -310,6 +324,7 @@
     ```
 
 ##### 4.3.2 后端权限限制
+
 !!! Abstract ""
     支持以下几种方式：
     ```java
@@ -364,7 +379,8 @@
 
 ### 4.4 前端权限
 
-##### 4.4.1 html代码中
+##### 4.4.1 html代码
+
 !!! Abstract ""
     ```html
     <!--
@@ -381,7 +397,8 @@
     
     ```
 
-##### 4.4.2 ts代码中
+##### 4.4.2 ts代码
+
 !!! Abstract ""
     ```ts
     import { usePermissionStore } from "@commons/stores/modules/permission";
@@ -402,10 +419,12 @@
     ```
 
 ### 4.5 菜单路由
+
 !!! Abstract ""
     模块内菜单路由配置，在每个模块内的`MenuConstants.java`中配置`MENUS_BUILDER`
 
 ##### 4.5.1 单级菜单
+
 !!! Abstract ""
     ```java
         private static final Menus.Builder MENUS_BUILDER = new Menus.Builder()
@@ -450,6 +469,7 @@
     ```
 
 ##### 4.5.2 有层级的菜单
+
 !!! Abstract ""
     ```java
         private static final Menus.Builder MENUS_BUILDER = new Menus.Builder()
@@ -482,6 +502,7 @@
     ```
 
 ### 4.6 定时任务
+
 !!! Abstract ""
     文档准备中...
 
