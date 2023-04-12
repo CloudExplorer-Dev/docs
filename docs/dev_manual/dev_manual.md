@@ -1,16 +1,38 @@
 ## 1 接口调用
 
-### 1.1 获取JWT-TOKEN
+### 1.1 获取 JWT-TOKEN
 
 !!! Abstract ""
-    使用用户名密码调用登录接口获取 JWT-TOKEN，可以从返回body中获取，也可以从返回的header中获取
+    使用用户名密码调用登录接口获取 JWT-TOKEN，从返回的header中获取
 
-    ```curl
-    #curl
-    
+    ```bash
+    curl -L -X POST 'localhost:9000/login' \
+    -i \
+    -H 'Content-Type: application/json' \
+    -d '{
+    "username": "admin",
+    "password": "cloudexplorer"
+    }'
     ```
+    登录成功返回
+    ```
+    HTTP/1.1 200 OK
+    CE-TOKEN: eyJhbGciOiJIUzUxMiIsInppcCI6IkdaSVAifQ.H4sIAAAAAAAA_42RvU7DMBSFX6Xy3ES5jhM7mUCoY1uppQMiDI5zA0ZOHOVHIFVdmWFj5QV4K8RrkJ_SDiyM9_M5x-fq7knXYE1isk-IzhISJ0RyT_AwohENUAovAy7AFwGl6GOWIiRknoyuUhY4ObJClyM-oe_Pj-_Xl6-39xFjKVODQ3xbdziAQmpz9l7kuqXK2C5zlS1GS_VgyyGq7IwZRtk0T7aeGmIqM6XyECNEYKkXsjzgIRfoeykPchwDGtvVaipjrJJmhKpG2eK1PrakHvUdjzngzcCLWRAH_rRdlf1Hprq6xrLdWDPpLlfr1c1yvduOr3WPl7I673CUb3-LHbGuRjNE1IVQuD64U7qx97r824HOgMUMYuCnX5pecXt3IHPy2Or-lpwLFUkUTgRMOowz3xFApcMpsEgKmgYy6MVNl_biq4Wz2y42_axlS-K-AlABIedzgs_VBHw2gMMPnsAUJC0CAAA.tLfEcyT8oYAlu6nkRGW-8yRm8z3uaOvoGVf-7oXkZ1bLEc1Y84mi7x9_aygMY7vhS4kT49EhnIcZY3L5lfajLw
+    Content-Type: application/json
+    Content-Length: 66
+    Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+    Pragma: no-cache
+    Expires: 0
+    X-Content-Type-Options: nosniff
+    X-Frame-Options: SAMEORIGIN
+    X-XSS-Protection: 1 ; mode=block
+    Referrer-Policy: no-referrer
+    
+    {"requestId":null,"code":200,"message":"登录成功","data":null}
+    ```
+    其中，相应头中的 `CE-TOKEN` 就是我们需要的 JWT-TOKEN
 
-### 1.2 使用JWT-TOKEN
+### 1.2 使用 JWT-TOKEN
 
 !!! Abstract ""
     调用登录以及任意需要认证的接口，在 response 的 header 内均会返回当前用户的 JWT-TOKEN：`CE-TOKEN`
@@ -23,9 +45,12 @@
     ```
     若`CE-ROLE`和`CE-SOURCE`与当前用户不匹配，后端认为就是`ANONYMOUS`角色。
 
-    ```curl
-    #curl
-    
+    ```bash
+    #以获取当前用户接口为例
+    curl -L -X GET 'localhost:9000/api/user/current' \
+    -H 'CE-SOURCE;' \
+    -H 'CE-ROLE: ADMIN' \
+    -H 'CE-TOKEN: eyJhbGciOiJIUzUxMiIsInppcCI6IkdaSVAifQ.H4sIAAAAAAAA_42Ru07DMBSGX6Xy3ES-Jk4mEOrYVmrpgAiDY5-AkXNRLgKp6soMGysvwFshXoNcSjuwMJ7P___7Pzp71DVQoxjtE2RNguIEqRDLMIhoRAUoiQ0JJWFSUAoMTAokQfNkdBUqh8lhcluM-IS-Pz--X1--3t5HDIVKHQzxbd3BAHJl3dl7kdmWald2xtdlPlqqh7IYoorOuWFUTfNU1lNDSJXROgsgAiA8xQHPRBiEEhhOQ5HBGNCUXa2nMq7Uyo1Q16BauLbHlhRT5mHuETwjOOYiFmzarjL_kemurqFoN6WbdJer9epmud5tx9e6x0tVnXc4yre_xY7YVqOZRNQngfQZ8ad0V97b4m8HOiM8ZmGMo9MvTa-4vTugOXpsbX9LkbIMBGdeSBX3uKLSkxkGj2uIVBZgI3jai5su7cVXC2-3XWz62aoWxX0FQiXhNJojeK4mwPgADj8zS7tQLQIAAA.mj7QaLQwiR5OYHQ5bya1Hd3PmgU4gFdpMb2bcNdONbpn_0TCAHIDkZSFTMWd2LfVRNo5Z7QrD32M6xJsSe_JVA'
     ```
 
 ## 2 后端权限
