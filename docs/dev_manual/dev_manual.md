@@ -1,14 +1,7 @@
 # 开发文档
 ## 1 环境准备
 
-<<<<<<< HEAD
-!!! Abstract ""
-    本节介绍如何搭建 CloudExplorer Lite 开发环境。
-
-## 1 前端环境准备
-=======
 ### 1.1 前端环境
->>>>>>> 451152a3d219b98610d9c4221e1b764fee4dbf0b
 
 !!! Abstract ""
     - 安装 [node](https://nodejs.org/)
