@@ -37,7 +37,7 @@
 !!! Abstract ""
     请在项目根目录执行
     ``` bash
-    mvn initialize
+    ./mvnw initialize
     ```
 ### 2.2 本地配置
 !!! Abstract ""
