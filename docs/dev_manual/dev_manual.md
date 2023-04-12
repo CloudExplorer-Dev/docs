@@ -1,8 +1,38 @@
-# 开发文档
+## 1 项目结构
 
-## 1 环境准备
+```
+.
+├── LICENSE                                          # License 申明
+├── README.md
+├── demo                                             # demo
+│     ├── DEMO-TEMPLATE                                   # 功能模块demo模版
+│     ├── pom.xml
+│     └── src
+├── doc
+│     ├── cloudexplorer                              # 配置项模版
+│     └── 开发指南.md
+├── framework                                        # 项目主框架应用
+│     ├── eureka                                          # 注册中心
+│     ├── gateway                                         # 网关
+│     ├── management-center                               # 管理中心
+│     ├── pom.xml
+│     ├── provider                                        # 需要用到的外部云sdk
+│     └── sdk                                             # 项目通用的前后端依赖/网关的前端
+├── mvnw
+├── mvnw.cmd
+├── package.json                                     # 整体 yarn 项目使用的 package 文件
+├── pom.xml                                          # 整体 maven 项目使用的 pom 文件
+└── services                                         # 功能模块
+      ├── finance-management
+      ├── operation-analysis
+      ├── pom.xml
+      ├── security-compliance
+      └── vm-service
+```
 
-### 1.1 前端环境
+## 2 环境准备
+
+### 2.1 前端环境
 
 !!! Abstract ""
     - 安装 [node](https://nodejs.org/)
@@ -19,7 +49,7 @@
         ```
 
 
-### 1.2 后端环境
+### 2.2 后端环境
 
 !!! Abstract ""
     - 安装 [JDK17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
@@ -27,16 +57,16 @@
     - 安装 [Docker](https://www.docker.com/) (可选)
 
 
-## 2 开发准备
+## 3 开发准备
 
-### 2.1 VMware相关依赖
+### 3.1 VMware相关依赖
 
 !!! Abstract ""
     请在项目根目录执行
     ``` bash
     ./mvnw initialize
     ```
-### 2.2 本地配置
+### 3.2 本地配置
 
 !!! Abstract ""
     若要项目启动，需要准备配置文件及目录
@@ -127,9 +157,9 @@
     ```
     
 
-## 3 开发调试
+## 4 开发调试
 
-### 3.1 启动前端项目
+### 4.1 启动前端项目
 
 !!! Abstract ""
     先在根目录执行安装前端需要的依赖
@@ -155,12 +185,12 @@
     ```
     根据启动后控制台显示地址进行访问
 
-### 3.2 启动后端端项目
+### 4.2 启动后端端项目
 
 !!! Abstract ""
     启动对应模块的Application.java启动类即可
 
-### 3.3 jar包方式启动
+### 4.3 jar包方式启动
 
 !!! Abstract ""
     先执行构建
@@ -179,15 +209,15 @@
 
     - 使用 `java -jar xxx.jar` 命令启动各个模块
 
-### 3.4 注意事项
+### 4.4 注意事项
 
 !!! Abstract ""
     第一次启动时，除 eureka 以外，必须先启动 management-center 进行必要数据库的初始化。
     
 
-## 4 代码相关
+## 5 代码相关
 
-### 4.1 接口基本调用参数
+### 5.1 接口基本调用参数
 
 !!! Abstract ""
     调用登录以及任意需要认证的接口，在response的header内均会返回当前用户的 JWT token：`CE-TOKEN`
@@ -200,7 +230,7 @@
     ```
     若`CE-ROLE`和`CE-SOURCE`与当前用户不匹配，后端认为就是`ANONYMOUS`角色。
 
-### 4.2 新模块搭建
+### 5.2 新模块搭建
 
 !!! Abstract ""
     - 打开目录`demo/src/test/java/`下文件 `CreateModuleUtil.java`
@@ -270,9 +300,9 @@
       ```
 
 
-### 4.3 后端权限
+### 5.3 后端权限
 
-##### 4.3.1 模块基础权限
+##### 5.3.1 模块基础权限
 
 !!! Abstract ""
     模块内基础权限配置，在每个模块内的`PermissionConstants.java`中配置`MODULE_PERMISSION_BUILDER`
@@ -323,7 +353,7 @@
     
     ```
 
-##### 4.3.2 后端权限限制
+##### 5.3.2 后端权限限制
 
 !!! Abstract ""
     支持以下几种方式：
@@ -377,9 +407,9 @@
 
     实现源码见`CeSecurityExpressionRoot.java`
 
-### 4.4 前端权限
+### 5.4 前端权限
 
-##### 4.4.1 html代码
+##### 5.4.1 html代码
 
 !!! Abstract ""
     ```html
@@ -397,7 +427,7 @@
     
     ```
 
-##### 4.4.2 ts代码
+##### 5.4.2 ts代码
 
 !!! Abstract ""
     ```ts
@@ -418,12 +448,12 @@
     
     ```
 
-### 4.5 菜单路由
+### 5.5 菜单路由
 
 !!! Abstract ""
     模块内菜单路由配置，在每个模块内的`MenuConstants.java`中配置`MENUS_BUILDER`
 
-##### 4.5.1 单级菜单
+##### 5.5.1 单级菜单
 
 !!! Abstract ""
     ```java
@@ -468,7 +498,7 @@
                 )
     ```
 
-##### 4.5.2 有层级的菜单
+##### 5.5.2 有层级的菜单
 
 !!! Abstract ""
     ```java
@@ -501,7 +531,7 @@
             )
     ```
 
-### 4.6 定时任务
+### 5.6 定时任务
 
 !!! Abstract ""
     文档准备中...
