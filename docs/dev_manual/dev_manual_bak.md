@@ -51,7 +51,7 @@
 
 ### 3.3 后端权限
 
-- 模块基础权限
+- 模块基础权限 
 !!! Abstract ""
     模块内基础权限配置，在每个模块内的`PermissionConstants.java`中配置`MODULE_PERMISSION_BUILDER`
 

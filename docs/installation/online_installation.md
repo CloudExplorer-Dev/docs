@@ -14,13 +14,15 @@
     ```
 
 ## 2 安装部署
+
 !!! Abstract ""
 	执行以下脚本进行一键安装： 
     ```
     /bin/bash -c "$(curl -fsSL https://resource.fit2cloud.com/cloudexplorer-lite/installer/releases/latest/quick_start.sh)"
     ```
 
-## 3 部署完成  
+## 3 部署完成 
+ 
 !!! Abstract ""   
     CloudExplorer Lite 是一款 B/S 架构的产品，即浏览器/服务器结构，在服务器安装完成后，客户端通过浏览器访问以下地址，即可开始使用。
     ```

@@ -3,6 +3,7 @@
 ![整体架构](./img/systemarch/systemarch.png){ width="800px" }
 
 ## 2 组件说明
+
 !!! Abstract ""
     - Eureka ：服务注册中心。
     - GateWay：API 网关服务。
@@ -20,6 +21,7 @@
 ![组件说明](./img/systemarch/components.png){ width="800px" }
 
 ## 3 管理模型
+
 ![管理模型](./img/systemarch/管理模型.png){ width="800px" }
 !!! Abstract ""
     - 平台：每个独立部署的 CloudExplorer Lite 即称为一套云管理平台系统。
