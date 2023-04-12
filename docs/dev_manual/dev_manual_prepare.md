@@ -1,34 +1,35 @@
 ## 1 项目结构
 
-```
-.
-├── LICENSE                                          # License 申明
-├── README.md
-├── demo                                             # demo
-│     ├── DEMO-TEMPLATE                                   # 功能模块demo模版
-│     ├── pom.xml
-│     └── src
-├── doc
-│     ├── cloudexplorer                              # 配置项模版
-│     └── 开发指南.md
-├── framework                                        # 项目主框架应用
-│     ├── eureka                                          # 注册中心
-│     ├── gateway                                         # 网关
-│     ├── management-center                               # 管理中心
-│     ├── pom.xml
-│     ├── provider                                        # 需要用到的外部云sdk
-│     └── sdk                                             # 项目通用的前后端依赖/网关的前端
-├── mvnw
-├── mvnw.cmd
-├── package.json                                     # 整体 yarn 项目使用的 package 文件
-├── pom.xml                                          # 整体 maven 项目使用的 pom 文件
-└── services                                         # 功能模块
-      ├── finance-management
-      ├── operation-analysis
-      ├── pom.xml
-      ├── security-compliance
-      └── vm-service
-```
+!!! Abstract ""
+    ```
+    .
+    ├── LICENSE                                          # License 申明
+    ├── README.md
+    ├── demo                                             # demo
+    │     ├── DEMO-TEMPLATE                                   # 功能模块demo模版
+    │     ├── pom.xml
+    │     └── src
+    ├── doc
+    │     ├── cloudexplorer                              # 配置项模版
+    │     └── 开发指南.md
+    ├── framework                                        # 项目主框架应用
+    │     ├── eureka                                          # 注册中心
+    │     ├── gateway                                         # 网关
+    │     ├── management-center                               # 管理中心
+    │     ├── pom.xml
+    │     ├── provider                                        # 需要用到的外部云sdk
+    │     └── sdk                                             # 项目通用的前后端依赖/网关的前端
+    ├── mvnw
+    ├── mvnw.cmd
+    ├── package.json                                     # 整体 yarn 项目使用的 package 文件
+    ├── pom.xml                                          # 整体 maven 项目使用的 pom 文件
+    └── services                                         # 功能模块
+        ├── finance-management
+        ├── operation-analysis
+        ├── pom.xml
+        ├── security-compliance
+        └── vm-service
+    ```
 
 ## 2 环境准备
 

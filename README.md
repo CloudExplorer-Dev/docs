@@ -63,7 +63,7 @@ nav:
             - 风险条例: user_manual/security-compliance/risk.md
     - 开发文档:
         - 环境准备: dev_manual/dev_manual_prepare.md
-        - 新建模块: dev_manual/dev_manual_new_module.md
+        - 新增一个扩展模块: dev_manual/dev_manual_new_module.md
         - 开发指南: dev_manual/dev_manual.md
     - 更新日志: update_log.md
     - 联系我们: contact.md

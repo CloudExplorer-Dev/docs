@@ -1,9 +1,12 @@
-# 新模块搭建
+# 新增一个扩展模块
+
+## 1 创建一个新模块
 
 !!! Abstract ""
-    - 打开目录`demo/src/test/java/`下文件 `CreateModuleUtil.java`
+    打开目录`demo/src/test/java/`下文件 `CreateModuleUtil.java`
 
-    - 修改文件中以下字段为需要生成的新模块信息
+!!! Abstract ""
+    修改文件中以下字段为需要生成的新模块信息
     ```java
     /**
      * 模块名
@@ -41,23 +44,36 @@
     private static final long NEW_MODULE_MANAGEMENT_PORT = 9921;
     
     ```
-    - 执行 createModule() 方法，等待执行完成，即会在services目录下根据模版创建出新的模块。
 
-    - 快速生成模块后，可根据需要再修改模块内的 `/模块名.yml` `/backend/src/main/resources/application.yml` 来修改该模块的icon以及菜单序号。
+## 2 完成创建新模块
 
-    - 可按需修改模块内的`/backend/src/main/java/com/fit2cloud/ModuleApplication.java`文件名为自己想要的名字。
+!!! Abstract ""
+    执行 createModule() 方法，等待执行完成，即会在services目录下根据模版创建出新的模块。
 
-    - 开始开发你的模块
+## 3 修改模块icon及菜单显示
 
-    - 要启动前端项目请先在项目根目录执行
+!!! Abstract ""
+    快速生成模块后，可根据需要再修改模块内的 `/模块名.yml` `/backend/src/main/resources/application.yml` 来修改该模块的icon以及菜单序号。
+
+## 4 修改模块名称
+
+!!! Abstract ""
+    可按需修改模块内的`/backend/src/main/java/com/fit2cloud/ModuleApplication.java`文件名为自己想要的名字。
+
+
+## 5 启动模块服务
+  
+!!! Abstract ""
+     要启动前端项目请先在项目根目录执行
       ``` bash
       yarn install
       ```
-    - 启动前端项目
+     启动前端项目
       ``` bash
       yarn workspace 你的新模块名 run dev
       ```
-    - 为了以后启动方便，你也可以在根目录的`package.json`中的`scripts`下添加你的模块
+!!! Abstract ""
+    为了以后启动方便，你也可以在根目录的`package.json`中的`scripts`下添加你的模块
       ``` json
       "scripts": {
         ...

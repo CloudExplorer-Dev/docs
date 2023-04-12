@@ -251,7 +251,7 @@
                 )
     ```
 
-### 4.2 有层级的菜单
+### 4.2 多级菜单
 
 !!! Abstract ""
     ```java
@@ -289,10 +289,11 @@
 !!! Abstract ""
     模块内定时任务配置，在每个模块内的`JobConstants.java`中配置`JobSetting`
     
-    ***任务类型***
+### 5.1任务类型
     
-    - cron表达式Job
-    
+  
+!!! Abstract ""
+    cron表达式Job
     ```
        new JobSetting(
                     // 任务执行器 -> 任务执行器 集成AsyncJob 实现Job接口
@@ -316,10 +317,11 @@
             );
     ```
     
-    - 时间间隔Job
-    
+  
+!!! Abstract "" 
+    时间间隔Job
     ```
-     new JobSetting(
+       new JobSetting(
                     // 任务执行器 -> 任务执行器 集成AsyncJob 实现Job接口
                     CloudAccountSyncJob.BillAuthJob.class,
                     // 任务名称
@@ -343,39 +345,53 @@
             );
     ```
     
-    ***定时任务组类型***
-    
+### 5.2 定时任务组类型
+
+!!! Abstract ""   
     定时任务组用来区分任务类型,目前任务组类型可以分为俩大类:公共任务组,模块自定义任务组
+
+- 公共定时任务组
+
+  
+!!! Abstract "" 
+    SYSTEM_GROUP
+    ```
+    系统定时任务组:
+    使用系统定时任务,项目启动会根据任务配置创建一个定时任务;
+    ```
+
+
+!!! Abstract "" 
+    CLOUD_ACCOUNT_RESOURCE_SYNC_GROUP
+    ```
+    云账号资源同步定时任务组:
+    使用云账号定时任务,项目启动会根据任务参数,为每一个云账号(cloudAccountShow函数返回true的)都分配一个定时任务;
+    并且可以在管理中心定时任务设置中修改任务信息;
+    定时任务参数: 同步区域参数选择;
+    ```
+- 模块自定义任务组
     
-    - 公共定时任务组
-    
-        - SYSTEM_GROUP
-          ```
-          系统定时任务组:
-          使用系统定时任务,项目启动会根据任务配置创建一个定时任务;
-          ```
-        - CLOUD_ACCOUNT_RESOURCE_SYNC_GROUP
-          ```
-          云账号资源同步定时任务组:
-          使用云账号定时任务,项目启动会根据任务参数,为每一个云账号(cloudAccountShow函数返回true的)都分配一个定时任务;
-          并且可以在管理中心定时任务设置中修改任务信息;
-          定时任务参数: 同步区域参数选择;
-          ```
-      - 模块自定义任务组
-    
-          - CLOUD_ACCOUNT_BILL_SYNC_GROUP
-            ```
-            云账单模块自定义任务组:
-            使用云账号定时任务,项目启动会根据任务参数,为每一个云账号(cloudAccountShow函数返回true的)都分配一个定时任务;
-            并且可以在管理中心定时任务设置中修改任务信息;
-            定时任务参数: 同步方式以及参数配置;
-            ```
-          - CLOUD_COMPLIANCE_RESOURCE_SYNC_GROUP
-            ```
-            安全合规模块自定义任务组:
-            使用云账号定时任务,项目启动会根据任务参数,为每一个云账号(cloudAccountShow函数返回true的)都分配一个定时任务;
-            并且可以在管理中心定时任务设置中修改任务信息;
-            定时任务参数: 没有任务参数配置;
-            ```
+
+
+!!! Abstract "" 
+    CLOUD_ACCOUNT_BILL_SYNC_GROUP
+    ```
+    云账单模块自定义任务组:
+    使用云账号定时任务,项目启动会根据任务参数,为每一个云账号(cloudAccountShow函数返回true的)都分配一个定时任务;
+    并且可以在管理中心定时任务设置中修改任务信息;
+    定时任务参数: 同步方式以及参数配置;
+    ```
+        
+        
+
+
+!!! Abstract "" 
+    CLOUD_COMPLIANCE_RESOURCE_SYNC_GROUP
+    ```
+    安全合规模块自定义任务组:
+    使用云账号定时任务,项目启动会根据任务参数,为每一个云账号(cloudAccountShow函数返回true的)都分配一个定时任务;
+    并且可以在管理中心定时任务设置中修改任务信息;
+    定时任务参数: 没有任务参数配置;
+    ```    
 
 
