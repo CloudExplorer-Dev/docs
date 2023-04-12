@@ -36,18 +36,17 @@
 !!! Abstract ""
     若要项目启动，需要准备配置文件及目录
 
-    - 初始化目录及文件
-    ```properties
-    mkdir -p /opt/cloudexplorer/conf
-    mkdir -p /opt/cloudexplorer/apps/extra/
-    mkdir -p /opt/cloudexplorer/logs
-
-    touch /opt/cloudexplorer/apps/extra/modules
-    touch /opt/cloudexplorer/cloudexplorer.properties
+    - 准备目录
+    ```bash
+    #将doc/下的 cloudexplorer 目录拷贝至 /opt目录下
+    cp -r doc/cloudexplorer /opt/cloudexplorer
     ```
 
-    - 配置`cloudexplorer.properties`，根据实际情况配置文件中的数据库访问地址等参数
-    ```bash
+    - 若在 Windows 环境下配置，将配置文件放置到工程源码的所在盘的指定路径下。
+    如源码工程在 D 盘下，则 /opt/cloudexplorer 存放路径为 d:\opt\cloudexplorer
+
+    - 配置`/opt/cloudexplorer/conf/cloudexplorer.properties`，根据实际情况配置文件中的数据库访问地址等参数
+    ```properties
     ce.datasource.url=jdbc:mysql://localhost:3306/ce?autoReconnect=false&useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
     ce.datasource.password=password
     ce.datasource.username=root
@@ -84,6 +83,42 @@
     logger.level=INFO
 
     ```
+    
+    - 配置数据库my.cnf
+    ```cnf
+    [mysqld]
+    datadir=/var/lib/mysql
+    default-time_zone=+8:00
+    default-storage-engine=INNODB
+    character_set_server=utf8mb4
+    lower_case_table_names=1
+    table_open_cache=128
+    max_connections=2000
+    max_connect_errors=6000
+    innodb_file_per_table=1
+    innodb_buffer_pool_size=1G
+    max_allowed_packet=64M
+    transaction_isolation=READ-COMMITTED
+    innodb_flush_method=O_DIRECT
+    innodb_lock_wait_timeout=1800
+    innodb_flush_log_at_trx_commit=0
+    sync_binlog=0
+    sql_mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
+    skip-name-resolve
+    max_connections=1000
+    wait_timeout=28800
+    
+    [mysql]
+    default-character-set=utf8mb4
+    
+    [mysql.server]
+    default-character-set=utf8mb4
+    ```
+    - 创建数据库
+    ```sql
+    CREATE DATABASE `ce` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+    ```
+    
 
 ## 3 开发调试
 ### 3.1 启动前端项目
