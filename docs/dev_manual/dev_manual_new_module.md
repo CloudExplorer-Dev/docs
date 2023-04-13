@@ -55,7 +55,7 @@
 !!! Abstract ""
     快速生成模块后，可根据需要再修改模块内的 `/模块名.yml` `/backend/src/main/resources/application.yml` 来修改该模块的icon以及菜单序号。
 
-## 4 修改模块名称
+## 4 修改模块启动类名称
 
 !!! Abstract ""
     可按需修改模块内的`/backend/src/main/java/com/fit2cloud/ModuleApplication.java`文件名为自己想要的名字。
