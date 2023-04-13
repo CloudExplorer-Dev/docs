@@ -1,8 +1,4 @@
-## 1 微信公众号
-
-
-
-## 2 微信群
+## 1 微信群
 
 !!! Abstract ""
     如您在使用过程中遇到问题，欢迎您在群里进行反馈与咨询，请您在询问前尽可能全面的描述您的情况，例如：
@@ -15,12 +11,12 @@
     ![wechat-group](./img/wechat-group.png){ width="135px" }
 
 
-## 3 项目地址
+## 2 项目地址
 
 !!! Abstract ""
     - [CloudExplorer Lite][CloudExplorer Lite] ![CloudExplorer Lite stars][CloudExplorer Lite stars]
 
-## 4 联系方式
+## 3 联系方式
 
 !!! Abstract ""
     - 官网：https://fit2cloud.com/cloudexplorer-lite/index.html
