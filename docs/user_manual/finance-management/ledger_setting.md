@@ -24,7 +24,7 @@
 
 ![设置分账规则](../../img/finance-management/ledger_setting/设置分账规则.png){ width="1235px" }
 
-## 3 已分账资源资源
+## 3 已分账资源
 
 !!! Abstract ""
 
