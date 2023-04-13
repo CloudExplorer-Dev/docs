@@ -58,17 +58,3 @@
 ![菜单切换1](../img/user_manual/菜单切换1.png){ width="1235px" }
 
 ![菜单切换2](../img/user_manual/菜单切换2.png){ width="1235px" }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
