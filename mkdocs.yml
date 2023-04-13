@@ -11,7 +11,7 @@ edit_uri: https://github.com/CloudExplorer-Dev/docs/tree/main/docs
 theme:
     name: 'material'
     logo: './img/logo-white.png'
-    favicon: './img/facio.ico'
+    favicon: './img/favicon.ico'
     language: 'zh'
     highlightjs: true
     hljs_languages:
