@@ -48,7 +48,7 @@ nav:
         - 离线安装: installation/offline_installation.md
     - 功能手册:
         - 通用功能: user_manual/general.md
-        - 主页: user_manual/homepage.md
+        - 首页: user_manual/homepage.md
         - 管理中心:
             - 云账号: 
                 - 添加云账号: user_manual/management/add_cloudaccount.md
