@@ -34,7 +34,7 @@
 ## 4 技术栈
 
 !!! Abstract ""
-    - 后端： ts , vue3 , vite , element-plus , microapp
-    - 前端： spring-security , spring-gateway
+    - 前端： ts , vue3 , vite , element-plus , microapp
+    - 后端： spring-security , spring-gateway
     - 中间件： MySQL , Redis , ElasticSerch , Logstash
     - 基础设施： Docker
