@@ -46,6 +46,7 @@ nav:
     - 安装部署:
         - 在线安装: installation/online_installation.md
         - 离线安装: installation/offline_installation.md
+    - 教程视频: best_practices.md
     - 功能手册:
         - 通用功能: user_manual/general.md
         - 首页: user_manual/homepage.md
