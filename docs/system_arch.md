@@ -1,6 +1,6 @@
 ## 1 整体架构
 
-![整体架构](./img/systemarch/systemarch.jpg){ width="12350px" }
+![整体架构](./img/systemarch/systemarch.png){ width="12350px" }
 
 ## 2 组件说明
 
