@@ -22,7 +22,8 @@
 
 ## 3 管理模型
 
-![管理模型](./img/systemarch/管理模型.png){ width="800px" }
+![管理模型](./img/systemarch/管理模型.png){ width="600px" }
+
 !!! Abstract ""
     - 平台：每个独立部署的 CloudExplorer Lite 即称为一套云管理平台系统。
     - 系统管理员：角色的权限范围为整个平台，管理整个平台内的用户、组织、工作空间、云账号等所有资源。
