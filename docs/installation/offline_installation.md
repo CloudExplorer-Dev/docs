@@ -22,7 +22,7 @@
     ```sh
     cd /tmp
     # 解压安装包
-    tar -zxvf cloudexplorer-v1.0.0-offline-linux-x86_64.tar.gz
+    tar -zxvf cloudexplorer-offline-installer-v1.x.y-x86_64.tar.gz
     ```
 
 ## 4 设置安装参数（可选）
@@ -119,7 +119,7 @@
 !!! Abstract ""
     ```sh
     # 进入安装包目录
-    cd cloudexplorer-v1.0.0-offline-linux-x86_64
+    cd cloudexplorer-offline-installer-v1.x.y-x86_64
     # 运行安装脚本
     bash install.sh
     ```

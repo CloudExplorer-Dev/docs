@@ -24,6 +24,8 @@ nav:
     - 安装部署:
         - 在线安装: installation/online_installation.md
         - 离线安装: installation/offline_installation.md
+        - 在线升级: installation/online_upgrade.md
+        - 离线升级: installation/offline_upgrade.md
     - 功能手册:
         - 通用功能: user_manual/general.md
         - 主页: user_manual/homepage.md
