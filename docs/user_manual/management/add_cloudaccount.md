@@ -116,6 +116,10 @@
 
 !!! Abstract ""
 
+    OpenStack 支持版本为：OpenStack Z 版本。
+
+!!! Abstract ""
+
     第一步：选择云平台（OpenStack）。<br />
 
 ![添加openstack第一步](../../img/management/add_cloudaccount/添加openstack第一步.png){ width="1235px" }
@@ -141,6 +145,10 @@
     点击“确认”后，云管平台校验通过后保存成功，返回云账号列表页面，新增的云账号状态为同步中，云管平台会全量同步云主机、云磁盘、镜像等资源数据。
 
 ## 5 添加 VMware 云账号
+
+!!! Abstract ""
+
+    VMware 支持版本为：VMware 7.0.3 版本。
 
 !!! Abstract ""
 

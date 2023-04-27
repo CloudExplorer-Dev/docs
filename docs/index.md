@@ -66,3 +66,8 @@
 !!! Abstract "" 
     CloudExplorer Lite 采用模块化设计，即插即用，企业可以轻松部署不同模块，从而扩大对云基础设施的管理范围。
 ![模块管理](./img/index/模块管理.png){ width="1235px" }
+
+## 5 了解更多
+
+!!! Abstract ""
+    - CloudExplorer Lite 知识库：https://kb.fit2cloud.com/categories/CloudExplorer-Lite

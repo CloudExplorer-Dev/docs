@@ -11,12 +11,17 @@
     ![wechat-group](./img/wechat-group.png){ width="135px" }
 
 
-## 2 项目地址
+## 2  开源社区论坛
+
+!!! Abstract ""
+    - 飞致云官方开源社区论坛：https://bbs.fit2cloud.com/c/ce/10
+
+## 3 项目地址
 
 !!! Abstract ""
     - [CloudExplorer Lite][CloudExplorer Lite] ![CloudExplorer Lite stars][CloudExplorer Lite stars]
 
-## 3 联系方式
+## 4 联系方式
 
 !!! Abstract ""
     - 官网：https://fit2cloud.com/cloudexplorer-lite/index.html
