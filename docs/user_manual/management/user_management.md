@@ -8,12 +8,11 @@
 
 !!! Abstract ""
 
-    创建用户有两种方式：<br />
-    - 方式一：【首页】-【快捷入口】-【创建用户】。<br />
-    - 方式二：【【管理中心】-【用户】-【创建】。
+    操作：【管理中心】-【用户与租户】-【用户管理】-【创建用户】。
 
-![创建用户方式一](../../img/management/user_management/创建用户方式一.png){ width="1235px" }
-![创建用户方式二](../../img/management/user_management/创建用户方式二.png){ width="1235px" }
+![创建用户](../../img/management/user_management/创建用户.png){ width="1235px" }
+![创建用户页面](../../img/management/user_management/创建用户页面.png){ width="1235px" }
+
 
 !!! Abstract ""
 
@@ -78,9 +77,17 @@
 
 !!! Abstract ""
 
-    当角色已经不再使用时，可以删除该角色。若删除正在使用的角色，关联了该角色全部用户将会被取消关联。
-
-    操作：在角色列表中，选择需要删除的角色，点击列表右侧“操作”列中的“删除”选项，页面会出现点再次确认弹窗，再次点击“删除”即可删除该角色。
+    当用户已经不再使用云管时，可以直接删除该用户。<br />
+    操作：用户右侧鼠标移到“...”，选择“删除”，页面会出现点再次确认弹窗，再次点击“删除”即可删除该角色
 
 ![删除用户](../../img/management/user_management/删除用户.png){ width="1235px" }
 ![删除用户确认](../../img/management/user_management/删除用户确认.png){ width="1235px" }
+
+## 6 禁用用户
+
+!!! Abstract ""
+
+    不确定该用户是否使用云管时，可以暂时禁用用户。解除“禁用”状态可继续登录云管。<br />
+
+![禁用用户](../../img/management/user_management/禁用用户.png){ width="1235px" }
+
