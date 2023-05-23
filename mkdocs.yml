@@ -56,7 +56,10 @@ nav:
             - 云账号: 
                 - 添加云账号: user_manual/management/add_cloudaccount.md
                 - 数据同步设置: user_manual/management/sysn_setting.md
-            - 用户管理: user_manual/management/user_management.md
+            - 用户与租户: 
+                - 用户管理: user_manual/management/user_management.md
+                - 角色管理: user_manual/management/role_management.md
+                - 组织管理: user_manual/management/org_management.md
             - 日志管理: user_manual/management/log.md
             - 模块管理: user_manual/management/modoule.md
             - 系统设置: user_manual/management/system_management.md

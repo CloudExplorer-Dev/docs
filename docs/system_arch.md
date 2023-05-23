@@ -1,6 +1,6 @@
 ## 1 整体架构
 
-![整体架构](./img/systemarch/systemarch.png){ width="12350px" }
+![整体架构](./img/systemarch/systemarch.png){ width="1235px" }
 
 ## 2 组件说明
 
@@ -18,7 +18,7 @@
     - Logstash：将本地日志文件推送至 ElasticSearch。
 
 各个组件间的关系可参考下图  
-![组件说明](./img/systemarch/components.png){ width="800px" }
+![组件说明](./img/systemarch/components.png){ width="1235px" }
 
 ## 3 管理模型
 
