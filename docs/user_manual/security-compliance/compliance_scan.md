@@ -11,14 +11,16 @@
 
 ![一键扫描创建页面](../../img/security-compliance/compliance_scan/一键扫描创建页面.png){ width="1235px" }
 
-## 2 规则组维度说明
+## 2 规则组管理
 
 !!! Abstract ""
 
     -   统计每个规则组中不合规/合规规则：统计不合规规则高风险、中风险、低风险的数量；
     -   点击规则组面板，仅展示当前规则组下的扫描结果。
+    -   点击规则名称进入编辑规则页面，支持规则编辑保存。
 
 ![规则组维度合规扫描结果展示](../../img/security-compliance/compliance_scan/规则组维度合规扫描结果展示.png){ width="1235px" }
+![规则编辑页面](../../img/security-compliance/compliance_scan/规则编辑页面.png){ width="1235px" }
 
 
 ## 3 云账号维度说明
@@ -35,18 +37,16 @@
 
 !!! Abstract ""
 
-    -   【扫描检查】- 扫描结果列表。
     -   点击扫描结果列表中【扫描结果】字段，打开当前规则的扫描结果详情。
 
-![扫描规则详情入口](../../img/security-compliance/compliance_scan/扫描规则详情入口.png){ width="1235px" }
+![扫描结果详情入口](../../img/security-compliance/compliance_scan/扫描结果详情入口.png){ width="1235px" }
 
 ### 4.2 扫描检测详情说明
 
 !!! Abstract ""
 
-    -   规则信息：显示规则名称、规则描述、风险等级、规则组、资源检测结果列表；
-    -   改进建议：显示当前规则所关联风险条例的改进建议，若未关联风险条例，则不显示改进建议；
+    -   规则信息：显示规则名称、规则描述、风险等级、规则组；
     -   资源检测结果：显示当前规则所有检测资源，支持按资源名称模糊搜索；
     -   点击【资源ID】“下拉”图标，可以显示当前资源的属性信息。
 
-![扫描检测详情](../../img/security-compliance/compliance_scan/扫描检测详情.png){ width="1235px" }
+![扫描结果详情](../../img/security-compliance/compliance_scan/扫描结果详情.png){ width="1235px" }
