@@ -13,7 +13,7 @@
 !!! Abstract ""
     在【云账单】-【分账设置】-【未分账资源】中，可查看所有未进行分账的资源。
 
-![未分帐资源列表](../../img/finance-management/ledger_setting/未分帐资源列表.png){ width="1235px" }
+![未分账资源列表](../../img/finance-management/ledger_setting/未分账资源列表.png){ width="1235px" }
 
 ## 2 设置分账规则
 
