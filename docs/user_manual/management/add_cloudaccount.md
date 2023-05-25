@@ -154,13 +154,13 @@
 
     第一步：选择云平台（VMware）。<br />
 
-![添加wmware第一步](../../img/management/add_cloudaccount/添加wmware第一步.png){ width="1235px" }
+![添加vmware第一步](../../img/management/add_cloudaccount/添加vmware第一步.png){ width="1235px" }
 
 !!! Abstract ""
 
     第二步：输入云账号名称、用户名、密码、认证地址。<br />
 
-![添加wmware第二步](../../img/management/add_cloudaccount/添加wmware第二步.png){ width="1235px" }
+![添加vmware第二步](../../img/management/add_cloudaccount/添加vmware第二步.png){ width="1235px" }
 
 !!! Abstract ""
 
