@@ -70,11 +70,14 @@ nav:
             - 磁盘管理: user_manual/cloud-server/disk.md
             - 任务: user_manual/cloud-server/task.md
             - 回收站: user_manual/cloud-server/Recycling_station.md
+
         - 云账单:
             - 账单总览: user_manual/finance-management/bill_overview.md
             - 账单明细: user_manual/finance-management/bill_detail.md
             - 自定义账单: user_manual/finance-management/custom_bill.md
             - 分账设置: user_manual/finance-management/ledger_setting.md 
+            - 计费策略: user_manual/finance-management/calculate_policy.md
+            
         - 运营分析:
             - 总览: user_manual/operation-analytics/overview.md
             - 基础资源分析: user_manual/operation-analytics/infrastructure_analysis.md
