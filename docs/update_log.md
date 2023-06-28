@@ -13,7 +13,9 @@
 
 ### v1.2.0
 
-2023 年 6 月 27 日
+2023 年 6 月 27 日    
+**重要：** 由此版本开始，由于升级了flyway，数据库不支持对接MySQL5.7。若用户使用MySQL5.7需注意将数据迁移至MySQL8.0。
+
 
 !!! Abstract "管理中心 :star2: :sunflower: :palm_tree:"
     feat：支持查看API文档。    
