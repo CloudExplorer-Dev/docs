@@ -83,7 +83,7 @@ nav:
             - 基础资源分析: user_manual/operation-analytics/infrastructure_analysis.md
             - 云主机分析: user_manual/operation-analytics/server_analysis.md
             - 磁盘分析: user_manual/operation-analytics/disk_analysis.md
-            - 资源优化: user_manual/operation-analytics/resource optimization.md
+            - 资源优化: user_manual/operation-analytics/resource_optimization.md
      
         - 安全合规:
             - 总览: user_manual/security-compliance/overview.md
