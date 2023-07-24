@@ -353,8 +353,11 @@
 
 !!! Abstract ""
 
-    CloudExplorer Lite 创建 Proxmox 云主机是根据模板进行完全克隆创建的，在创建之前需要在PVE管理工具中先设置好虚拟机模板。
-    在创建 Proxmox 云主机时需要设置云主机的名称、密码，模板需要安装cloud-init插件，安装指引可通过常见问题查看。
+    CloudExplorer Lite 创建 Proxmox 云主机是根据模板进行完全克隆创建的，在创建之前需要在PVE管理工具中先设置好虚拟机模板。<br />
+    在创建 Proxmox 云主机时需要设置云主机的名称、密码，模板需要安装cloud-init插件。<br />
+    关于 cloud-init 可参考官方资料：<br />
+    https://pve.proxmox.com/wiki/Cloud-Init_FAQ#What_is_cloud-init.3F  <br />
+    https://forum.proxmox.com/threads/finally-cloudbase-init-windows-servers.48823/
 
 !!! Abstract ""
 
