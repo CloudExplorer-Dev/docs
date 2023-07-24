@@ -173,10 +173,11 @@
     
 !!! Abstract ""
 
-    VMware 云主机配置变更可以自行设置要变更的配置大小。<br />
+    VMware、Proxmox 云主机配置变更可以自行设置要变更的配置大小。<br />
     如有设置计费策略，配置变更时会显示预估费用
 
 ![VMware配置变更](../../img/cloud-server/server/VMware配置变更.png){ width="1235px" }
+![Proxmox配置变更](../../img/cloud-server/server/Proxmox配置变更.png){ width="1235px" }
    
   
 !!! Abstract ""

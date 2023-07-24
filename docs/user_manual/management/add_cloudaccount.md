@@ -174,7 +174,40 @@
 
     点击“完成”后，云管平台校验通过后保存成功，返回云账号列表页面，新增的云账号状态为同步中，云管平台会全量同步云主机、云磁盘、镜像、账单等资源数据。
 
-## 6 查看云账号详情
+## 6 添加 Proxmox 云账号
+
+!!! Abstract ""
+
+    Proxmox 支持版本为：Proxmox 7.4 版本。
+
+!!! Abstract ""
+
+    第一步：选择云平台（Proxmox）。<br />
+
+![添加proxmox第一步](../../img/management/add_cloudaccount/添加proxmox第一步.png){ width="1235px" }
+
+!!! Abstract ""
+
+    第二步：输入云账号名称、Proxmox服务地址、Proxmox服务端口、Realm 、用户名、密码。<br />
+
+![添加proxmox第二步](../../img/management/add_cloudaccount/添加proxmox第二步.png){ width="1235px" }
+
+!!! Abstract ""
+
+    __字段说明：__<br />
+    - 云账号名称：云管平台定义的字段用于区分云账号的标识，名称唯一。<br />
+    - Proxmox服务地址：部署Proxmox的服务地址。<br />
+    - Proxmox服务端口：部署时开通的Proxmox服务端口。<br />
+    - Realm：Linux PAM standard authentication / Proxmox VE authentication server。<br />
+    - 用户名： Proxmox 账号授权 API 访问用户的用户名。<br />
+    - 密码： Proxmox 账号授权 API 访问用户名对应的密码。<br />
+ 
+!!! Abstract ""
+
+    点击“完成”后，云管平台校验通过后保存成功，返回云账号列表页面，新增的云账号状态为同步中，云管平台会全量同步云主机、云磁盘、镜像等资源数据。
+
+
+## 7 查看云账号详情
 
 !!! Abstract ""
 
@@ -186,7 +219,7 @@
 
 ![查看云账号详情](../../img/management/add_cloudaccount/查看云账号详情.png){ width="1235px" }
 
-## 7 校验云账号
+## 8 校验云账号
 
 !!! Abstract ""
 
@@ -197,7 +230,7 @@
 
 ![校验云账号](../../img/management/add_cloudaccount/校验云账号.png){ width="1235px" }  
 
-## 8 编辑云账号
+## 9 编辑云账号
 
 !!! Abstract ""
 
@@ -209,7 +242,7 @@
 
 ![编辑云账号页面](../../img/management/add_cloudaccount/编辑云账号页面.png){ width="1235px" }  
 
-## 9 删除云账号
+## 10 删除云账号
 
 !!! Abstract ""
 
@@ -217,6 +250,6 @@
 
     操作：在云账号列表中，选择需要删除的云账号，点击列表右侧“操作”列中的“删除”选项，页面会出现点再次确认弹窗，再次点击“删除”后，云管平台会将该云账号所有同步到本地的数据清空，不会影响云平台上的所有的数据。
 
-![删除单个云账号](../../img/management/add_cloudaccount/删除单个云账号.png){ width="1235px" }  
-
+![删除单个云账号](../../img/management/add_cloudaccount/删除单个云账号.png){ width="1235px" } 
+ 
 ![批量删除云账号](../../img/management/add_cloudaccount/批量删除云账号.png){ width="1235px" }  
