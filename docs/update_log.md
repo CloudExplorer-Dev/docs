@@ -11,6 +11,25 @@
 
 ## 2 更新内容
 
+### v1.3.0
+
+2023 年 7 月 25 日
+
+!!! Abstract "管理中心 :star2: "
+    feat：支持纳管 Proxmox VE 云平台的云账号。    
+    feat：支持Proxmox VE 云账号连接校验。          
+    feat：支持对 Proxmox VE 云平台的云账号手动同步资源和账单。          
+    feat：支持对 Proxmox VE 云平台的云账号定时同步设置。    
+
+!!! Abstract "云主机管理 :star2: "
+    feat：支持通过模板完全克隆方式创建 Proxmox VE 云主机。     
+    feat：支持对 Proxmox VE 云主机进行开机/关机/关闭电源/重启/配置变更等运维操作。    
+    feat：支持对 Proxmox VE 磁盘进行添加磁盘/挂载/卸载/删除等运维操作。    
+
+!!! Abstract "云账单  :star2: "
+    feat：支持对 Proxmox VE 云主机和磁盘的计费策略设置。   
+    feat：支持查看Proxmox VE 云主机和磁盘的账单明细。   
+
 ### v1.2.0
 
 2023 年 6 月 27 日    
