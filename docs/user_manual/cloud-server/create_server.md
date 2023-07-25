@@ -349,19 +349,19 @@
     在【任务】中可查看任务的进度和状态。
 
 
-## 6 创建 Proxmox 云主机
+## 6 创建 Proxmox VE 云主机
 
 !!! Abstract ""
 
-    CloudExplorer Lite 创建 Proxmox 云主机是根据模板进行完全克隆创建的，在创建之前需要在PVE管理工具中先设置好虚拟机模板。<br />
-    在创建 Proxmox 云主机时需要设置云主机的名称、密码，模板需要安装cloud-init插件。<br />
+    CloudExplorer Lite 创建 Proxmox VE 云主机是根据模板进行完全克隆创建的，在创建之前需要在 Proxmox VE 平台中先设置好虚拟机模板。<br />
+    在创建 Proxmox VE 云主机时需要设置云主机的名称、密码，模板需要安装cloud-init插件。<br />
     关于 cloud-init 可参考官方资料：<br />
     https://pve.proxmox.com/wiki/Cloud-Init_FAQ#What_is_cloud-init.3F  <br />
     https://forum.proxmox.com/threads/finally-cloudbase-init-windows-servers.48823/
 
 !!! Abstract ""
 
-    在云账号选择页面选择需要创建资源的 Proxmox 云账号，点击“立即创建”进入创建云主机操作。创建一台 Proxmox 云主机需要经过基础配置、网络配置、系统配置、确认信息四个步骤。
+    在云账号选择页面选择需要创建资源的 Proxmox VE 云账号，点击“立即创建”进入创建云主机操作。创建一台 Proxmox VE 云主机需要经过基础配置、网络配置、系统配置、确认信息四个步骤。
 
 ![创建Proxmox](../../img/cloud-server/create/创建Proxmox.png){ width="1235px" }
 
@@ -401,7 +401,7 @@
 !!! Abstract ""
 
     系统配置中需要设置云主机的登录凭证和主机名称。<br />
-    当前 Proxmox 云主机的登录方式为密码登录，用户需要自己设置云主机的登录密码。<br />
+    当前 Proxmox VE 云主机的登录方式为密码登录，用户需要自己设置云主机的登录密码。<br />
     如需一次创建多台云主机，则系统配置页面会分多个标签页设置每台云主机的名称。<br />
 
 ![Proxmox系统配置](../../img/cloud-server/create/Proxmox系统配置.png){ width="1235px" }

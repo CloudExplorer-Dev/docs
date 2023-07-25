@@ -116,7 +116,7 @@
 
 !!! Abstract ""
 
-    OpenStack 支持版本为：OpenStack Z 版本。
+    OpenStack 测试验证版本为：OpenStack Z 版本。
 
 !!! Abstract ""
 
@@ -148,7 +148,7 @@
 
 !!! Abstract ""
 
-    VMware 支持版本为：VMware 7.0.3 版本。
+    VMware 测试验证版本为：VMware 7.0.3 / 8.0.1 版本。
 
 !!! Abstract ""
 
@@ -174,11 +174,11 @@
 
     点击“完成”后，云管平台校验通过后保存成功，返回云账号列表页面，新增的云账号状态为同步中，云管平台会全量同步云主机、云磁盘、镜像、账单等资源数据。
 
-## 6 添加 Proxmox 云账号
+## 6 添加 Proxmox VE 云账号
 
 !!! Abstract ""
 
-    Proxmox 支持版本为：Proxmox 7.4 版本。
+    Proxmox VE 测试验证版本为：Proxmox VE 7.4 版本。
 
 !!! Abstract ""
 
@@ -188,7 +188,7 @@
 
 !!! Abstract ""
 
-    第二步：输入云账号名称、Proxmox服务地址、Proxmox服务端口、Realm 、用户名、密码。<br />
+    第二步：输入云账号名称、Proxmox 服务地址、Proxmox 服务端口、Realm 、用户名、密码。<br />
 
 ![添加proxmox第二步](../../img/management/add_cloudaccount/添加proxmox第二步.png){ width="1235px" }
 
@@ -196,11 +196,11 @@
 
     __字段说明：__<br />
     - 云账号名称：云管平台定义的字段用于区分云账号的标识，名称唯一。<br />
-    - Proxmox服务地址：部署Proxmox的服务地址。<br />
-    - Proxmox服务端口：部署时开通的Proxmox服务端口。<br />
+    - Proxmox服务地址：部署Proxmox VE的服务地址。<br />
+    - Proxmox服务端口：部署时开通的Proxmox VE 服务端口。<br />
     - Realm：Linux PAM standard authentication / Proxmox VE authentication server。<br />
-    - 用户名： Proxmox 账号授权 API 访问用户的用户名。<br />
-    - 密码： Proxmox 账号授权 API 访问用户名对应的密码。<br />
+    - 用户名： Proxmox VE 账号授权 API 访问用户的用户名。<br />
+    - 密码： Proxmox VE 账号授权 API 访问用户名对应的密码。<br />
  
 !!! Abstract ""
 
