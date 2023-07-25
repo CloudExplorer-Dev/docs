@@ -353,12 +353,18 @@
 
 !!! Abstract ""
 
-    CloudExplorer Lite 创建 Proxmox VE 云主机是根据模板进行完全克隆创建的，在创建之前需要在 Proxmox VE 平台中先设置好虚拟机模板。<br />
+    CloudExplorer Lite 创建 Proxmox VE 云主机是根据模板进行完全克隆创建的，在创建之前需要在 Proxmox VE 平台中先设置好虚拟机模板。针对模板有以下要求：
+
     1.在创建 Proxmox VE 云主机时需要设置云主机的名称、密码，模板需要安装cloud-init插件。<br />
-    2.在模板中还需要安装Agent，CloudExplorer Lite 是通过Agent来获取虚拟机的网络信息，支持的Agent版本是：qemu-guest-agent-2.3.0-4.e17.x86_64.rpm 。<br />
+    
     关于 cloud-init 可参考官方资料：<br />
     https://pve.proxmox.com/wiki/Cloud-Init_FAQ#What_is_cloud-init.3F  <br />
     https://forum.proxmox.com/threads/finally-cloudbase-init-windows-servers.48823/
+    
+    2.CloudExplorer Lite 是通过 Agent 来获取虚拟机的网络信息，模板中还需要安装并运行 Agent 且在 Proxmox VE 平台中启用 Qemu-guest-agent。<br />
+
+    关于 Agent 可参考官方资料：<br />
+    https://pve.proxmox.com/wiki/Qemu-guest-agent
 
 !!! Abstract ""
 
