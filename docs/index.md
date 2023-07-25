@@ -9,14 +9,14 @@
 ## 1 产品优势
 
 !!! Abstract ""
-    - 多云对接：CloudExplorer Lite 支持对接纳管市场上主流的公有云和私有云，包括阿里云、华为云、腾讯云、VMware、OpenStack 等；
+    - 多云对接：CloudExplorer Lite 支持对接纳管市场上主流的公有云和私有云，包括阿里云、华为云、腾讯云、VMware、OpenStack、Proxmox VE 等；
     - 开箱即用：作为一款轻量版云管平台，CloudExplorer Lite 提供诸多开箱即用的功能满足大部分企业的基本需求；
     - 扩展能力：CloudExplorer Lite 提供了强大的多租户体系和模块化能力，可以满足企业的定制化需求。
 
 ## 2 多云对接能力
 
 !!! Abstract ""
-    CloudExplorer Lite 支持对接纳管市场上主流的公有云和私有云基础设施，包括阿里云、腾讯云、华为云、VMware、OpenStack等。
+    CloudExplorer Lite 支持对接纳管市场上主流的公有云和私有云基础设施，包括阿里云、腾讯云、华为云、VMware、OpenStack、Proxmox VE 等。
 ![云账号](./img/index/云账号.png){ width="1235px" }
 
 ## 3 开箱即用的功能
