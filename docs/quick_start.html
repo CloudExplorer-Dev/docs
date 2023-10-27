@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>quick_start.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8">快速入门</h1>
+<h2 id="1-%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2">1 一键部署</h2>
+<p>!!! Abstract &quot;&quot;</p>
+<pre><code>按照部署服务器要求准备好部署环境后，可通过 CloudExplorer Lite 快速安装脚本一键快速部署。  
+**注意：** 一键安装采用默认参数，更多有关离线部署方式可查看本文档的【离线安装】。 
+
+**部署服务器要求:** 
+```
+- 操作系统：Linux 操作系统（推荐 CentOS 7 及以上版本，Ubuntu 18 及以上版本）
+- CPU/内存：8 核 16 GB
+- 磁盘空间：200 GB
+- 网络要求：可访问互联网
+```
+执行以下脚本进行一键安装： 
+```
+/bin/bash -c &quot;$(curl -fsSL https://resource.fit2cloud.com/cloudexplorer-lite/installer/releases/latest/quick_start.sh)&quot;
+```
+CloudExplorer Lite 是一款 B/S 架构的产品，即浏览器/服务器结构，在服务器安装完成后，客户端通过浏览器访问以下地址，即可开始使用。
+```
+http://目标服务器IP地址：服务运行端口
+默认用户名：admin，默认密码：cloudexplorer
+```
+</code></pre>
+<h2 id="2-%E5%8A%9F%E8%83%BD%E7%95%8C%E9%9D%A2%E4%BB%8B%E7%BB%8D">2 功能界面介绍</h2>
+<ul>
+<li>主页</li>
+</ul>
+<p>!!! Abstract &quot;&quot;
+登录 CloudExplorer Lite 系统后默认进入主页，分为顶部导航、左侧导航栏和工作区域三部分。<br>
+<strong>顶部导航栏：</strong> 顶部显示系统logo、用户登录身份（组织和角色）、帮助文档、个人信息。<br>
+<strong>产品服务：</strong> 固定模块菜单，包含管理中心、云主机服务、云账单、运营分析、安全合规五个服务模块，点击图标便可切换到相应的模块中。<br>
+<strong>工作区域：</strong> 右侧为工作区域，显示主页的内容包含个人信息、快捷服务、我的资源、不合规规则/资源统计、费用概览、费用趋势、云主机优化建议、云主机趋势、云主机状态分布。</p>
+<p><img src="./img/quick_start/主页.png" alt="首页">{ width=&quot;1235px&quot; }</p>
+<ul>
+<li>管理中心</li>
+</ul>
+<p>!!! Abstract &quot;&quot;
+云管平台的核心能力之一，CloudExplorer Lite 为用户提供多租户、多角色的管理模型；<br>
+采用模块化设计，即插即用，提供模块管理。企业可以轻松部署不同模块，从而扩大对云基础设施的管理范围；<br>
+具体可参考本文档的功能手册【管理中心】。</p>
+<p><img src="./img/quick_start/管理中心.png" alt="管理中心">{ width=&quot;1235px&quot; }</p>
+<ul>
+<li>云主机管理</li>
+</ul>
+<p>!!! Abstract &quot;&quot;
+CloudExplorer Lite 提供统一的云主机生命周期管理操作和监控界面，基于既有的用户管理体系，用户可创建、可操作的资源都具有租户隔离属性。具体可参考本文档的功能手册【云主机管理】。</p>
+<p><img src="img/quick_start/云主机管理.png" alt="云主机管理">{ width=&quot;1235px&quot; }</p>
+<ul>
+<li>云账单</li>
+</ul>
+<p>!!! Abstract &quot;&quot;
+CloudExplorer Lite 提供统一的费用管理、费用分摊、自定义多维度账单功能，可作为企业的云资源成本分析中心，能够帮助企业用户有效降低云上资源的成本管理难度。具体可参考本文档的功能手册【云账单】。</p>
+<p><img src="img/quick_start/账单总览.png" alt="云账单">{ width=&quot;1235px&quot; }</p>
+<ul>
+<li>运营分析</li>
+</ul>
+<p>!!! Abstract &quot;&quot;
+CloudExplorer Lite 能够对企业现有的云资源从分布、容量、使用情况等多个维度进行分析，并提供资源优化建议。具体可参考本文档的功能手册【运营分析】。</p>
+<p><img src="img/quick_start/运营分析-总览.png" alt="运营分析">{ width=&quot;1235px&quot; }</p>
+<ul>
+<li>安全合规</li>
+</ul>
+<p>!!! Abstract &quot;&quot;
+CloudExplorer Lite 支持一键扫描多个云平台的多种云资源，可灵活定义规则。具体可参考本文档的功能手册【安全合规】。</p>
+<p><img src="img/quick_start/安全合规-总览.png" alt="安全合规">{ width=&quot;1235px&quot; }</p>
+<h2 id="3-%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B">3 快速上手</h2>
+<h3 id="31-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF">3.1 使用场景</h3>
+<p>!!! Abstract &quot;&quot;
+本章主要介绍系统管理员如何使用 CloudExplorer Lite 快速管理一个云账号，帮助大家快速掌握使用方法。<br>
+初始化配置步骤：添加云账号 -&gt; 管理云主机 -&gt; 查看云账单 -&gt; 查看运营分析 -&gt; 查看安全合规。</p>
+<h3 id="32-%E5%88%9B%E5%BB%BA%E4%BA%91%E8%B4%A6%E5%8F%B7">3.2 创建云账号</h3>
+<p>!!! Abstract &quot;&quot;
+首次登录 CloudExplorer Lite 平台时，会自动弹出添加云账号的向导，用户需要根据向导将云账号添加到云管平台中进行管理。
+<img src="img/quick_start/云账号向导-选择云平台.png" alt="云账号向导">{ width=&quot;1235px&quot; }</p>
+<p>!!! Abstract &quot;&quot;
+输入名称为“阿里云-产品”，输入云账号的 AccessKey ID、AccessKey Secret，点击“确认”。<br>
+说明：AccessKey权限要求：ECS的管理权限和所有资源的只读权限。</p>
+<pre><code>![向导-输入云账号凭证](img/quick_start/云账号向导-输入云账号凭证.png)
+</code></pre>
+<p>!!! Abstract &quot;&quot;
+非首次登录可打开【管理中心】-【云账号】菜单，创建一个阿里云的云账号，名称为“阿里云-产品”。</p>
+<p><img src="img/quick_start/云账号列表.png" alt="云账号列表">{ width=&quot;1235px&quot; }</p>
+<p>!!! Abstract &quot;&quot;
+云平台选择“阿里云”(若是其他云平台的可选择对应的云平台)  ，当前以“阿里云”为例。</p>
+<p><img src="img/quick_start/选择云平台.png" alt="添加云账号">{ width=&quot;1235px&quot; }</p>
+<p>!!! Abstract &quot;&quot;
+输入名称为“阿里云-产品”，输入云账号的 AccessKey ID、AccessKey Secret，点击“确认”。<br>
+说明：AccessKey权限要求：ECS的管理权限和所有资源的只读权限。</p>
+<p><img src="img/quick_start/输入云账号凭证.png" alt="输入云账号凭证">{ width=&quot;1235px&quot; }</p>
+<p>!!! Abstract &quot;&quot;
+系统会自动同步该云账号下的云主机、磁盘、镜像等资源数据，过去一年的账单数据和安全合规扫描的资源数据；<br>
+系统会定时同步数据，用户也可以手动同步；<br>
+资源同步完成后便可使用各服务模块进行查看和管理，否则各服务模块将没有数据。</p>
+<p><img src="img/quick_start/云账号-同步全量数据.png" alt="云账号-同步全量数据">{ width=&quot;1235px&quot; }
+!!! Abstract &quot;&quot;
+点击“云账号名称”进入详情，可以查看具体的同步记录和同步详情。
+<img src="img/quick_start/云账号-同步详情.png" alt="云账号-同步详情">{ width=&quot;1235px&quot; }</p>
+<h3 id="33-%E7%AE%A1%E7%90%86%E4%BA%91%E4%B8%BB%E6%9C%BA">3.3 管理云主机</h3>
+<p>!!! Abstract &quot;&quot;
+【云主机管理】模块提供了云主机的创建、启/停机、回收、配置变更、扩容、授权等；<br>
+同时基于用户管理体系，用户可创建、可操作的资源都具备隔离性；<br>
+在多云环境下提供统一的操作界面，为用户带来极大便利。</p>
+<ul>
+<li>创建阿里云云主机</li>
+</ul>
+<p>!!! Abstract &quot;&quot;
+当用户需要新增云主机资源时，无需提前操作任何配置，可以直接在云主机列表上方点击【创建云主机】。</p>
+<p><img src="img/quick_start/创建云主机.png" alt="创建云主机">{ width=&quot;1235px&quot; }</p>
+<p>!!! Abstract &quot;&quot;
+需要用户选择在哪个云账号下创建云主机，选择云账号：阿里云，以下以创建阿里云云主机为例。</p>
+<p><img src="img/quick_start/创建云主机-选择云账号.png" alt="选择云账号">{ width=&quot;1235px&quot; }</p>
+<p>!!! Abstract &quot;&quot;
+在基础配置页面需要选择：付费方式、区域、可用区、实例规格、操作系统、系统盘喝数据盘大小。<br>
+下方会根据所选的配置信息显示预估费用。</p>
+<p><img src="img/quick_start/创建阿里云主机-基础配置.png" alt="基础配置1">{ width=&quot;1235px&quot; }</p>
+<p>!!! Abstract &quot;&quot;
+在网络配置页面需要选择：子网、安全组、是否分配公网IP及公网IP的带宽设置。</p>
+<p><img src="img/quick_start/创建阿里云主机-网络配置.png" alt="网络配置">{ width=&quot;1235px&quot; }</p>
+<p>!!! Abstract &quot;&quot;
+在系统配置中设置云主机的登录凭证、主机名和 Hostname；<br>
+若同时创建多台资源则每台资源都需要设置主机名和 Hostname。</p>
+<p><img src="img/quick_start/创建阿里云主机-系统配置.png" alt="系统设置">{ width=&quot;1235px&quot; }</p>
+<p>!!! Abstract &quot;&quot;
+最后一步是确认之前几步所选的信息，如果确认正确，提交申请后便会执行任务创建云主机。</p>
+<p><img src="img/quick_start/创建阿里云主机-确认信息.png" alt="确认信息">{ width=&quot;1235px&quot; }</p>
+<p>!!! Abstract &quot;&quot;
+提交创建任务后，在云主机列表新增一条创建中的记录，并在任务列表生成创建云主机的任务。</p>
+<p><img src="img/quick_start/云主机-创建中记录.png" alt="创建中云主机列表">{ width=&quot;1235px&quot; }
+<img src="img/quick_start/任务-创建云主机任务.png" alt="创建云主机任务">{ width=&quot;1235px&quot; }</p>
+<p>!!! Abstract &quot;&quot;
+任务完成后，云主机状态变为“运行中”。</p>
+<ul>
+<li>云主机管理操作</li>
+</ul>
+<p>!!! Abstract &quot;&quot;
+当前支持对云主机进行启动、停用、重启、删除、配置变更、添加磁盘等管理操作。</p>
+<p><img src="img/quick_start/云主机管理操作.png" alt="云主机管理操作">{ width=&quot;1235px&quot; }</p>
+<h3 id="34-%E6%9F%A5%E7%9C%8B%E4%BA%91%E8%B4%A6%E5%8D%95">3.4 查看云账单</h3>
+<p>!!! Abstract &quot;&quot;
+提供了多云多账号的费用汇总、费用分摊、自定义多维度月账单功能，可作为企业的云资源成本分析。显著降低云上资源成本管理的难度，提升成本管理效率。</p>
+<ul>
+<li>账单总览</li>
+</ul>
+<p>!!! Abstract &quot;&quot;
+系统管理员可以看到所有纳管云账号的当月总花费、今年总花费、与上月或上个周期费用对比增加还是减少、近半年/近一年的总费用趋势，下方的月账单中可以查看用户自定义不同维度的月账单；<br>
+组织管理员和普通用户可以查看已被分账授权的当月总花费、今年总花费和近半年/近一年的总费用趋势，下方的月账单中可以查看已被分账授权的不同维度的月账单。</p>
+<p><img src="img/quick_start/账单总览.png" alt="云账单">{ width=&quot;1235px&quot; }</p>
+<ul>
+<li>账单明细</li>
+</ul>
+<p>!!! Abstract &quot;&quot;
+系统管理员可以查看所有公有云账号的账单明细，默认显示当月的明细，可以按照账期查看明细；<br>
+组织管理员和普通用户可以查看已被分账授权的账单明细，默认显示当月的明细，可以按照账期查看明细。</p>
+<p><img src="img/quick_start/账单明细.png" alt="账单明细">{ width=&quot;1235px&quot; }</p>
+<ul>
+<li>自定义账单</li>
+</ul>
+<p>!!! Abstract &quot;&quot;
+只有系统管理员添加编辑自定义账单，组织管理员和普通用户只能在账单总览中查看月账单；<br>
+系统内置部分月账单：按云平台、按云账号、按产品名称、按付费类型、按企业项目；<br>
+若想要展示其他维度的月账单，系统管理员添加自定义月账单，支持的统计维度字段：云平台、云账号、区域、企业项目、组织（工作空间的父级组织）、组织层级树（可选择组织层级）、工作空间、标签、产品名称、产品明细、付费方式、资源名称等。</p>
+<p><img src="img/quick_start/自定义账单.png" alt="自定义账单">{ width=&quot;1235px&quot; }</p>
+<p>!!! Abstract &quot;&quot;
+创建一个“按工作空间”的自定义账单，统计字段是：组织、工作空间、产品名称。</p>
+<p><img src="img/quick_start/创建自定义账单.png" alt="添加自定义账单">{ width=&quot;1235px&quot; }</p>
+<p>!!! Abstract &quot;&quot;
+自定义账单创建完成后可在【账单总览】中下面的月账单中查看。</p>
+<p><img src="img/quick_start/账单总览-自定义账单.png" alt="账单总览">{ width=&quot;1235px&quot; }</p>
+<ul>
+<li>分账设置</li>
+</ul>
+<p>!!! Abstract &quot;&quot;
+当前系统同步到的账单明细都是基于各云平台上的原始账单数据；<br>
+若想把这些账单分摊到系统中的组织或工作空间上时，需要在原始账单中存在按组织/工作空间对应的分账字段，如标签、企业项目/财务单元，此时系统管理员可以按照分账字段在系统中进行分账规则设定；<br>
+若当前还没有分账依据字段，需要先到公有云平台上规范账单，按照系统支持的分账依据进行归纳；<br>
+当前云管平台支持的分账依据字段有：云平台、云账号、企业项目/财务单元、产品名称、产品明细、标签。</p>
+<p><img src="img/quick_start/未分账资源.png" alt="分账设置">{ width=&quot;1235px&quot; }</p>
+<p>!!! Abstract &quot;&quot;
+在分账设置页面选择组织/工作空间，右侧设置分账规则。
+分账规则设置保存后，需要延迟 24 小时可在已分账资源列表展示分摊过来的资源。</p>
+<p><img src="img/quick_start/添加分账规则.png" alt="添加分账规则">{ width=&quot;1235px&quot; }
+<img src="img/quick_start/已分账资源.png" alt="已分账资源">{ width=&quot;1235px&quot; }</p>
+<h3 id="35-%E6%9F%A5%E7%9C%8B%E8%BF%90%E8%90%A5%E5%88%86%E6%9E%90">3.5 查看运营分析</h3>
+<p>!!! Abstract &quot;&quot;
+添加完云账号便可对已纳管的资源从分布、容量、使用情况等各维度进行分析，并提供资源优化建议。</p>
+<ul>
+<li>总览</li>
+</ul>
+<p>!!! Abstract &quot;&quot;
+整体查看当前所管理的资源数量统计，资源使用情况统计，资源分布、资源增长趋势以及资源的优化建议；<br>
+可以按照云账号过滤显示每个云账号下的资源统计情况。</p>
+<p><img src="img/quick_start/运营分析-总览.png" alt="运营分析总览">{ width=&quot;1235px&quot; }</p>
+<ul>
+<li>基础资源分析</li>
+</ul>
+<p>!!! Abstract &quot;&quot;
+基础资源为私有云计算资源和存储器的整体资源从容量、分配情况、使用情况等不同维度进行分析，该功能只有系统管理员角色可查看。</p>
+<p><img src="img/quick_start/基础资源分析.png" alt="基础资源分析">{ width=&quot;1235px&quot; }</p>
+<ul>
+<li>云主机分析</li>
+</ul>
+<p>!!! Abstract &quot;&quot;
+对纳管的云主机从不同维度进行可视化分析，查看云主机的趋势、资源使用情况、运行状态、资源分布等。</p>
+<p><img src="img/quick_start/云主机分析.png" alt="云主机分析">{ width=&quot;1235px&quot; }</p>
+<ul>
+<li>磁盘分析</li>
+</ul>
+<p>!!! Abstract &quot;&quot;
+对纳管的磁盘从不同维度进行可视化分析，查看磁盘的趋势、资源使用情况、运行状态、资源分布等。</p>
+<p><img src="img/quick_start/磁盘分析.png" alt="云磁盘优化">{ width=&quot;1235px&quot; }</p>
+<ul>
+<li>云主机优化</li>
+</ul>
+<p>!!! Abstract &quot;&quot;
+根据优化策略查找出需要优化的资源，用户可以自定义优化策略的筛选条件；<br>
+支持查询建议升配、建议降配、变更付费方式、建议回收的云主机。</p>
+<p><img src="img/quick_start/云主机优化.png" alt="云主机优化">{ width=&quot;1235px&quot; }</p>
+<p>!!! Abstract &quot;&quot;
+点击每个优化策略面板右上角的设置按钮，可以对优化策略筛选条件进行自定义设置，设置保存后则按照最新的策略进行查询资源。</p>
+<p><img src="img/quick_start/云主机优化策略.png" alt="资源优化策略">{ width=&quot;1235px&quot; }</p>
+<h3 id="36-%E6%9F%A5%E7%9C%8B%E5%AE%89%E5%85%A8%E5%90%88%E8%A7%84">3.6 查看安全合规</h3>
+<p>!!! Abstract &quot;&quot;
+该模块针对对管理员提供查看云平台上的云资源的相关配置是否符合等保条款或企业配置规范；<br>
+当前支持检测的资源类型为：云服务器、云磁盘、弹性 IP、对象存储、安全组、VPC、负载均衡、云数据库、宿主机、存储器、资源池、RAM 用户;<br>
+支持的云平台：阿里云、华为云、腾讯云、VMware、OpenStack。</p>
+<ul>
+<li>总览</li>
+</ul>
+<p>!!! Abstract &quot;&quot;
+从不同维度展示最近一次扫描检测结果的统计信息。</p>
+<p><img src="img/quick_start/安全合规-总览.png" alt="安全合规总览">{ width=&quot;1235px&quot; }</p>
+<ul>
+<li>合规扫描</li>
+</ul>
+<p>!!! Abstract &quot;&quot;
+支持管理员一键扫描；<br>
+支持管理员可以按规则组、资源类型、云账号查看扫描规则及扫描结果详情。</p>
+<p><img src="img/quick_start/扫描检查.png" alt="扫描检查">{ width=&quot;1235px&quot; }</p>
+<ul>
+<li>规则设置</li>
+</ul>
+<p>!!! Abstract &quot;&quot;
+系统内置了多条合规规则，并支持管理员按照企业要求自定义合规规则;<br>
+支持管理员开启和关闭规则，关闭的规则不会在【合规扫描】中显示该规则，一键扫描时也不会扫描该规则。</p>
+<p><img src="img/quick_start/合规规则.png" alt="合规规则">{ width=&quot;1235px&quot; }</p>
+<p>!!! Abstract &quot;&quot;
+新增一个阿里云的磁盘是否开启加密设置的检测规则，操作如下：</p>
+<p><img src="img/quick_start/创建合规规则.png" alt="创建合规规则">{ width=&quot;1235px&quot; }</p>
+<p>!!! Abstract &quot;&quot;
+添加完规则后，在【合规扫描】中变可以看到该规则，点击【一键扫描】后可以选择改规则所在的规则组进行资源扫描。
+<img src="img/quick_start/扫描检查-新增的规则.png" alt="新增规则扫描">{ width=&quot;1235px&quot; }
+<img src="img/quick_start/选择扫描新增规则的组.png" alt="一键扫描新增规则">{ width=&quot;1235px&quot; }</p>
+<p>!!! Abstract &quot;&quot;
+点击相应规则的“扫描结果详情”字段，可以进入扫描资源详情页面。</p>
+<p><img src="img/quick_start/扫描结果详情.png" alt="扫描结果详情">{ width=&quot;1235px&quot; }</p>
+<ul>
+<li>规则组</li>
+</ul>
+<p>!!! Abstract &quot;&quot;
+支持用户自定义规则组将扫描规则进行分组。</p>
+<p><img src="img/quick_start/规则组.png" alt="合规规则组">{ width=&quot;1235px&quot; }</p>
+<ul>
+<li>风险条例</li>
+</ul>
+<p>!!! Abstract &quot;&quot;
+当前风险条例是根据等保 2.0 等级保护基本要求条款及改进建议说明；<br>
+系统内置的条款覆盖安全审计、访问控制、入侵防范、网络架构等127条风险条例；<br>
+用户在自定义规则时可以关联风险条例，关联风险条例的规则，在查看扫描结果时可以看到相关的改进建议。</p>
+<p><img src="img/quick_start/风险条例.png" alt="扫描结果详情">{ width=&quot;1235px&quot; }
+<img src="img/quick_start/扫描结果改进建议.png" alt="扫描结果详情">{ width=&quot;1235px&quot; }</p>
+
+</body>
+</html>
