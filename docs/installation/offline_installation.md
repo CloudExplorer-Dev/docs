@@ -3,7 +3,7 @@
 !!! Abstract ""
     **部署服务器要求：**
 
-    * 操作系统: Linux 操作系统（推荐 CentOS 7 及以上版本，Ubuntu 18 及以上版本）
+    * 操作系统: Ubuntu (推荐Ubuntu 22.04)/ CentOS 7 64 位系统
     * CPU/内存: 8 核 16 GB
     * 磁盘空间: 200 GB
   
